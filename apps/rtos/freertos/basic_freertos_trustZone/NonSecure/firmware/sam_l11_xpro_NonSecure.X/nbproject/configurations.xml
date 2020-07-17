@@ -14,11 +14,6 @@
               <itemPath>../../../NonSecure/firmware/src/config/sam_l11_xpro/peripheral/port/plib_port.h</itemPath>
             </logicalFolder>
           </logicalFolder>
-          <logicalFolder name="f3" displayName="system" projectFiles="true">
-            <logicalFolder name="f1" displayName="debug" projectFiles="true">
-              <itemPath>../../../NonSecure/firmware/src/config/sam_l11_xpro/system/debug/sys_debug.h</itemPath>
-            </logicalFolder>
-          </logicalFolder>
           <itemPath>../../../NonSecure/firmware/src/config/sam_l11_xpro/device_cache.h</itemPath>
           <itemPath>../../../NonSecure/firmware/src/config/sam_l11_xpro/toolchain_specifics.h</itemPath>
           <itemPath>../../../NonSecure/firmware/src/config/sam_l11_xpro/definitions.h</itemPath>
@@ -122,7 +117,7 @@
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="f2" displayName="trustZone" projectFiles="true">
-        <itemPath>../../../NonSecure/firmware/src/trustZone/veneer.h</itemPath>
+        <itemPath>../../../NonSecure/firmware/src/trustZone/nonsecure_entry.h</itemPath>
       </logicalFolder>
       <itemPath>../../../NonSecure/firmware/src/app.h</itemPath>
       <itemPath>../../../NonSecure/firmware/src/app1.h</itemPath>
@@ -206,13 +201,13 @@
         <targetDevice>ATSAML11E16A</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>noID</platformTool>
+        <platformTool>EdbgTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>2.40</languageToolchainVersion>
+        <languageToolchainVersion>2.41</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="SAML11_DFP" vendor="Microchip" version="3.2.86"/>
+        <pack name="SAML11_DFP" vendor="Microchip" version="4.0.110"/>
         <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
       </packs>
       <ScriptingSettings>
@@ -342,8 +337,7 @@
         <property key="enable-check-sections" value="false"/>
         <property key="exclude-floating-point-library" value="false"/>
         <property key="exclude-standard-libraries" value="false"/>
-        <property key="extra-lib-directories"
-                  value="../../../Secure/firmware/sam_l11_xpro_Secure.X"/>
+        <property key="extra-lib-directories" value="./"/>
         <property key="fill-flash-options-addr" value=""/>
         <property key="fill-flash-options-const" value=""/>
         <property key="fill-flash-options-how" value="0"/>
@@ -365,7 +359,7 @@
         <property key="oXC32ld-extra-opts" value=""/>
         <property key="optimization-level" value=""/>
         <property key="preprocessor-macros"
-                  value="AS=0x8000;RS=0x800;BOOTPROT=0x0;NONSECURE"/>
+                  value="AS=0x8000;AS_SIZE=0x8000;RS=0x800;RS_SIZE=0x800;BOOTPROT=0x0;BOOTPROT_SIZE=0x0;NONSECURE"/>
         <property key="remove-unused-sections" value="true"/>
         <property key="report-memory-usage" value="false"/>
         <property key="serial-length" value=""/>
@@ -419,6 +413,8 @@
       </C32Global>
       <EdbgTool>
         <property key="AutoSelectMemRanges" value="auto"/>
+        <property key="arm.use_vtor" value="false"/>
+        <property key="arm.vtor_adr" value="exception_table"/>
         <property key="communication.activationmode" value="nohv"/>
         <property key="communication.interface" value="swd"/>
         <property key="communication.speed" value="2.000"/>
@@ -428,6 +424,7 @@
         <property key="firmware.toolpack"
                   value="Press to select which tool pack to use"/>
         <property key="firmware.update.action" value="firmware.update.use.latest"/>
+        <property key="lastid" value=""/>
         <property key="memories.aux" value="false"/>
         <property key="memories.bootflash" value="true"/>
         <property key="memories.configurationmemory" value="true"/>
@@ -452,11 +449,16 @@
         <property key="programoptions.preserveprogramrange" value="false"/>
         <property key="programoptions.preserveuserid" value="false"/>
         <property key="programoptions.programuserotp" value="false"/>
+        <property key="script.log_level" value="0"/>
+        <property key="script.reset_delay" value="0"/>
+        <property key="script.show_output" value="false"/>
         <property key="toolpack.updateoptions"
                   value="toolpack.updateoptions.uselatestoolpack"/>
         <property key="toolpack.updateoptions.packversion"
                   value="Press to select which tool pack to use"/>
         <property key="voltagevalue" value=""/>
+        <property key="x.erase.key" value="0xFFFFFFFF,0xFFFFFFFF,0xFFFFFFFF,0xFFFFFFFF"/>
+        <property key="x.erase.type" value="ChipEraseAll"/>
       </EdbgTool>
       <PICkit3PlatformTool>
         <property key="ADC 1" value="true"/>
