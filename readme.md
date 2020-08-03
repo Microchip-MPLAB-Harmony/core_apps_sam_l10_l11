@@ -1,6 +1,6 @@
 ﻿[![MCHP](https://www.microchip.com/ResourcePackages/Microchip/assets/dist/images/logo.png)](https://www.microchip.com)
 
-# Harmony 3 core library application examples for SAM L10/L11 family
+# Harmony 3 Driver and System Service examples for SAM L10/L11 family
 
 MPLAB® Harmony 3 is an extension of the MPLAB® ecosystem for creating embedded firmware solutions for Microchip 32-bit SAM and PIC® microcontroller and microprocessor devices.  Refer to the following links for more information.
 
@@ -10,7 +10,7 @@ MPLAB® Harmony 3 is an extension of the MPLAB® ecosystem for creating embedded
 - [Microchip MPLAB® Harmony](https://www.microchip.com/mplab/mplab-harmony)
 - [Microchip MPLAB® Harmony Pages](https://microchip-mplab-harmony.github.io/)
 
-This repository contains the MPLAB® Harmony 3 core library application examples for SAM L10/L11 family
+This repository contains the MPLAB® Harmony 3 Driver and System Service examples for SAM L10/L11 family
 
 - [Release Notes](release_notes.md)
 - [MPLAB® Harmony License](mplab_harmony_license.md)
@@ -20,10 +20,10 @@ This content can also be downloaded using content manager by following these [in
 
 ## Contents Summary
 
-| Folder     | Description                             |
-| ---        | ---                                     |
-| apps       | Peripheral library example applications |
-| docs       | Applications help documentation         |
+| Folder     | Description                                    |
+| ---        | ---                                            |
+| apps       | Driver and System Service example applications |
+| docs       | Applications help documentation                |
 
 ## Code Examples
 
@@ -31,7 +31,18 @@ The following applications are provided to demonstrate the typical or interestin
 
 | Name | Description|
 |:---------|:-----------|
+|[I2C driver asynchronous - I2C EEPROM](apps/driver/i2c/async/i2c_eeprom/readme.md) | This example application shows how to use the I2C driver in asynchronous mode to perform operations on the EEPROM |
+|[I2C driver asynchronous - I2C multi client](apps/driver/i2c/async/i2c_multi_slave/readme.md) | This example application shows how to use multi-client feature of the I2C driver in asynchronous mode to communicate with temperature sensor and an EEPROM |
+|[SDSPI Driver asynchronous - Read Write](apps/driver/sdspi/async/sdspi_read_write/readme.md) | This example demonstrates how to use the SDSPI driver in asynchronous mode to perform non-blocking operations on the SD Card Media |
+|[SPI Driver asynchronous - multi client](apps/driver/spi/async/spi_multi_slave/readme.md) | This example demonstrates how to use single instance of the SPI driver in asynchronous mode to communicate with multiple EEPROMs |
+|[USART driver asynchronous - USART echo](apps/driver/usart/async/usart_echo/readme.md) | This example echoes the received characters over the console using the USART driver in asynchronous mode |
+|[FAT filesystem using NVM Media](apps/fs/nvm_fat/readme.md) | This application shows an example of implementing a FAT disk in the device internal Flash memory |
+|[FreeRTOS basic](apps/rtos/freertos/basic_freertos/readme.md) | This example application blinks an LED to show the FreeRTOS threads that are running and to indicate status |
+|[TrustZone FreeRTOS basic](apps/rtos/freertos/basic_freertos_trustZone/readme.md) | This example application blinks an LED to show the FreeRTOS threads that are running in non-secure mode and to indicate status |
+|[Console Debug System Service using UART](apps/system/console_debug/sys_console_debug_uart_read_write/readme.md) | This example application demonstrates the UART based console and debug system service |
+|[Time System Service multi-client](apps/system/time/sys_time_multiclient/readme.md) | This example application demonstrates the multi-client system timer functionality |
 |||
+
 ____
 
 [![License](https://img.shields.io/badge/license-Harmony%20license-orange.svg)](https://github.com/Microchip-MPLAB-Harmony/core_apps_sam_l10_l11/blob/master/mplab_harmony_license.md)
