@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2020-07-21T06:47:55Z */
+/* file generated from device description version 2020-11-19T07:18:13Z */
 #ifndef _SAML10_TRAM_COMPONENT_H_
 #define _SAML10_TRAM_COMPONENT_H_
 
@@ -121,24 +121,6 @@
 #define TRAM_DSCC_Msk                         _U_(0xBFFFFFFF)                                      /**< (TRAM_DSCC) Register Mask  */
 
 
-/* -------- TRAM_PERMW : (TRAM Offset: 0x10) ( /W 8) Permutation Write -------- */
-#define TRAM_PERMW_RESETVALUE                 _U_(0x00)                                            /**<  (TRAM_PERMW) Permutation Write  Reset Value */
-
-#define TRAM_PERMW_DATA_Pos                   _U_(0)                                               /**< (TRAM_PERMW) Permutation Scrambler Data Input Position */
-#define TRAM_PERMW_DATA_Msk                   (_U_(0x7) << TRAM_PERMW_DATA_Pos)                    /**< (TRAM_PERMW) Permutation Scrambler Data Input Mask */
-#define TRAM_PERMW_DATA(value)                (TRAM_PERMW_DATA_Msk & ((value) << TRAM_PERMW_DATA_Pos))
-#define TRAM_PERMW_Msk                        _U_(0x07)                                            /**< (TRAM_PERMW) Register Mask  */
-
-
-/* -------- TRAM_PERMR : (TRAM Offset: 0x11) ( R/ 8) Permutation Read -------- */
-#define TRAM_PERMR_RESETVALUE                 _U_(0x00)                                            /**<  (TRAM_PERMR) Permutation Read  Reset Value */
-
-#define TRAM_PERMR_DATA_Pos                   _U_(0)                                               /**< (TRAM_PERMR) Permutation Scrambler Data Output Position */
-#define TRAM_PERMR_DATA_Msk                   (_U_(0x7) << TRAM_PERMR_DATA_Pos)                    /**< (TRAM_PERMR) Permutation Scrambler Data Output Mask */
-#define TRAM_PERMR_DATA(value)                (TRAM_PERMR_DATA_Msk & ((value) << TRAM_PERMR_DATA_Pos))
-#define TRAM_PERMR_Msk                        _U_(0x07)                                            /**< (TRAM_PERMR) Register Mask  */
-
-
 /* -------- TRAM_RAM : (TRAM Offset: 0x100) (R/W 32) TrustRAM -------- */
 #define TRAM_RAM_RESETVALUE                   _U_(0x00)                                            /**<  (TRAM_RAM) TrustRAM  Reset Value */
 
@@ -146,6 +128,30 @@
 #define TRAM_RAM_DATA_Msk                     (_U_(0xFFFFFFFF) << TRAM_RAM_DATA_Pos)               /**< (TRAM_RAM) Trust RAM Data Mask */
 #define TRAM_RAM_DATA(value)                  (TRAM_RAM_DATA_Msk & ((value) << TRAM_RAM_DATA_Pos))
 #define TRAM_RAM_Msk                          _U_(0xFFFFFFFF)                                      /**< (TRAM_RAM) Register Mask  */
+
+/* BYTE mode */
+#define TRAM_RAM_BYTE_BYTE0_Pos               _U_(0)                                               /**< (TRAM_RAM) Trust RAM Data Position */
+#define TRAM_RAM_BYTE_BYTE0_Msk               (_U_(0xFF) << TRAM_RAM_BYTE_BYTE0_Pos)               /**< (TRAM_RAM) Trust RAM Data Mask */
+#define TRAM_RAM_BYTE_BYTE0(value)            (TRAM_RAM_BYTE_BYTE0_Msk & ((value) << TRAM_RAM_BYTE_BYTE0_Pos))
+#define TRAM_RAM_BYTE_BYTE1_Pos               _U_(8)                                               /**< (TRAM_RAM) Trust RAM Data Position */
+#define TRAM_RAM_BYTE_BYTE1_Msk               (_U_(0xFF) << TRAM_RAM_BYTE_BYTE1_Pos)               /**< (TRAM_RAM) Trust RAM Data Mask */
+#define TRAM_RAM_BYTE_BYTE1(value)            (TRAM_RAM_BYTE_BYTE1_Msk & ((value) << TRAM_RAM_BYTE_BYTE1_Pos))
+#define TRAM_RAM_BYTE_BYTE2_Pos               _U_(16)                                              /**< (TRAM_RAM) Trust RAM Data Position */
+#define TRAM_RAM_BYTE_BYTE2_Msk               (_U_(0xFF) << TRAM_RAM_BYTE_BYTE2_Pos)               /**< (TRAM_RAM) Trust RAM Data Mask */
+#define TRAM_RAM_BYTE_BYTE2(value)            (TRAM_RAM_BYTE_BYTE2_Msk & ((value) << TRAM_RAM_BYTE_BYTE2_Pos))
+#define TRAM_RAM_BYTE_BYTE3_Pos               _U_(24)                                              /**< (TRAM_RAM) Trust RAM Data Position */
+#define TRAM_RAM_BYTE_BYTE3_Msk               (_U_(0xFF) << TRAM_RAM_BYTE_BYTE3_Pos)               /**< (TRAM_RAM) Trust RAM Data Mask */
+#define TRAM_RAM_BYTE_BYTE3(value)            (TRAM_RAM_BYTE_BYTE3_Msk & ((value) << TRAM_RAM_BYTE_BYTE3_Pos))
+#define TRAM_RAM_BYTE_Msk                     _U_(0xFFFFFFFF)                                       /**< (TRAM_RAM_BYTE) Register Mask  */
+
+/* HALFWORD mode */
+#define TRAM_RAM_HALFWORD_HWORD0_Pos          _U_(0)                                               /**< (TRAM_RAM) Trust RAM Halfword Data Position */
+#define TRAM_RAM_HALFWORD_HWORD0_Msk          (_U_(0xFFFF) << TRAM_RAM_HALFWORD_HWORD0_Pos)        /**< (TRAM_RAM) Trust RAM Halfword Data Mask */
+#define TRAM_RAM_HALFWORD_HWORD0(value)       (TRAM_RAM_HALFWORD_HWORD0_Msk & ((value) << TRAM_RAM_HALFWORD_HWORD0_Pos))
+#define TRAM_RAM_HALFWORD_HWORD1_Pos          _U_(16)                                              /**< (TRAM_RAM) Trust RAM Halfword Data Position */
+#define TRAM_RAM_HALFWORD_HWORD1_Msk          (_U_(0xFFFF) << TRAM_RAM_HALFWORD_HWORD1_Pos)        /**< (TRAM_RAM) Trust RAM Halfword Data Mask */
+#define TRAM_RAM_HALFWORD_HWORD1(value)       (TRAM_RAM_HALFWORD_HWORD1_Msk & ((value) << TRAM_RAM_HALFWORD_HWORD1_Pos))
+#define TRAM_RAM_HALFWORD_Msk                 _U_(0xFFFFFFFF)                                       /**< (TRAM_RAM_HALFWORD) Register Mask  */
 
 
 /** \brief TRAM register offsets definitions */
@@ -156,8 +162,6 @@
 #define TRAM_STATUS_REG_OFST           (0x07)              /**< (TRAM_STATUS) Status Offset */
 #define TRAM_SYNCBUSY_REG_OFST         (0x08)              /**< (TRAM_SYNCBUSY) Synchronization Busy Status Offset */
 #define TRAM_DSCC_REG_OFST             (0x0C)              /**< (TRAM_DSCC) Data Scramble Control Offset */
-#define TRAM_PERMW_REG_OFST            (0x10)              /**< (TRAM_PERMW) Permutation Write Offset */
-#define TRAM_PERMR_REG_OFST            (0x11)              /**< (TRAM_PERMR) Permutation Read Offset */
 #define TRAM_RAM_REG_OFST              (0x100)             /**< (TRAM_RAM) TrustRAM Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
@@ -172,9 +176,7 @@ typedef struct
   __I   uint8_t                        TRAM_STATUS;        /**< Offset: 0x07 (R/   8) Status */
   __I   uint32_t                       TRAM_SYNCBUSY;      /**< Offset: 0x08 (R/   32) Synchronization Busy Status */
   __O   uint32_t                       TRAM_DSCC;          /**< Offset: 0x0C ( /W  32) Data Scramble Control */
-  __O   uint8_t                        TRAM_PERMW;         /**< Offset: 0x10 ( /W  8) Permutation Write */
-  __I   uint8_t                        TRAM_PERMR;         /**< Offset: 0x11 (R/   8) Permutation Read */
-  __I   uint8_t                        Reserved2[0xEE];
+  __I   uint8_t                        Reserved2[0xF0];
   __IO  uint32_t                       TRAM_RAM[64];       /**< Offset: 0x100 (R/W  32) TrustRAM */
 } tram_registers_t;
 

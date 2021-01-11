@@ -67,10 +67,6 @@
 #define LED_On()         (PORT_REGS->GROUP[0].PORT_OUTCLR = 1 << 7)
 #define LED_Off()        (PORT_REGS->GROUP[0].PORT_OUTSET = 1 << 7)
 
-/*** SWITCH Macros for SWITCH ***/
-#define SWITCH_Get()     ((PORT_REGS->GROUP[0].PORT_IN >> 27) & 0x01)
-#define SWITCH_STATE_PRESSED   0
-#define SWITCH_STATE_RELEASED  1
 
 
 

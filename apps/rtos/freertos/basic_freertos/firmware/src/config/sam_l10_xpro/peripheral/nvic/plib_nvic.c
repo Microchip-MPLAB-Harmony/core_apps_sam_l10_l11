@@ -58,8 +58,49 @@ void NVIC_Initialize( void )
     /* Enable the interrupt sources and configure the priorities as configured
      * from within the "Interrupt Manager" of MHC. */
     NVIC_SetPriority(SysTick_IRQn, 3);
+    NVIC_SetPriority(EIC_OTHER_IRQn, 3);
+    NVIC_EnableIRQ(EIC_OTHER_IRQn);
+    NVIC_SetPriority(SERCOM0_0_IRQn, 3);
+    NVIC_EnableIRQ(SERCOM0_0_IRQn);
+    NVIC_SetPriority(SERCOM0_1_IRQn, 3);
+    NVIC_EnableIRQ(SERCOM0_1_IRQn);
+    NVIC_SetPriority(SERCOM0_2_IRQn, 3);
+    NVIC_EnableIRQ(SERCOM0_2_IRQn);
+    NVIC_SetPriority(SERCOM0_OTHER_IRQn, 3);
+    NVIC_EnableIRQ(SERCOM0_OTHER_IRQn);
 
 
 
-    return;
+}
+
+void NVIC_INT_Enable( void )
+{
+    __DMB();
+    __enable_irq();
+}
+
+bool NVIC_INT_Disable( void )
+{
+    bool processorStatus;
+
+    processorStatus = (bool) (__get_PRIMASK() == 0);
+
+    __disable_irq();
+    __DMB();
+
+    return processorStatus;
+}
+
+void NVIC_INT_Restore( bool state )
+{
+    if( state == true )
+    {
+        __DMB();
+        __enable_irq();
+    }
+    else
+    {
+        __disable_irq();
+        __DMB();
+    }
 }
