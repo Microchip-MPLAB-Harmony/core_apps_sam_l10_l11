@@ -40,12 +40,9 @@ The following table shows the target hardware for the application projects.
 
 ### Setting up [SAML10 Xplained Pro Evaluation Kit](https://www.microchip.com/DevelopmentTools/ProductDetails/dm320204)
 
-- To run the demo, the following additional hardware are required:
-  - One [EEPROM 3 Click](https://www.mikroe.com/eeprom-3-click) board
-  - One [mikroBUS Xplained Pro](https://www.microchip.com/developmenttools/ProductDetails/ATMBUSADAPTER-XPRO) boards
+- To run the demo, one [EEPROM 3 Click](https://www.mikroe.com/eeprom-3-click) board is required
 
-- Connect [mikroBUS Xplained Pro board](https://www.microchip.com/developmenttools/ProductDetails/ATMBUSADAPTER-XPRO) to EXT1 header
-- Plug the [EEPROM 3 click Board](https://www.mikroe.com/eeprom-3-click) into the MikroBus socket of the [mikroBUS Xplained Pro board](https://www.microchip.com/developmenttools/ProductDetails/ATMBUSADAPTER-XPRO)
+- Connect [EEPROM 3 click Board](https://www.mikroe.com/eeprom-3-click) on to the mikroBUS header
 - Connect the Debug USB port on the board to the computer using a micro USB cable
 
 ## Running the Application
