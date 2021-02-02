@@ -323,6 +323,42 @@ void TRAM_Handler                  ( void );
 #include "component/wdt.h"
 /** @}  end of Peripheral Software API */
 
+/* ************************************************************************** */
+/*   INSTANCE DEFINITIONS FOR SAML10E16A */
+/* ************************************************************************** */
+#include "instance/ac.h"
+#include "instance/adc.h"
+#include "instance/ccl.h"
+#include "instance/dac.h"
+#include "instance/dmac.h"
+#include "instance/dsu.h"
+#include "instance/eic.h"
+#include "instance/evsys.h"
+#include "instance/freqm.h"
+#include "instance/gclk.h"
+#include "instance/idau.h"
+#include "instance/mclk.h"
+#include "instance/nvmctrl.h"
+#include "instance/opamp.h"
+#include "instance/osc32kctrl.h"
+#include "instance/oscctrl.h"
+#include "instance/pac.h"
+#include "instance/pm.h"
+#include "instance/port.h"
+#include "instance/ptc.h"
+#include "instance/rstc.h"
+#include "instance/rtc.h"
+#include "instance/sercom0.h"
+#include "instance/sercom1.h"
+#include "instance/sercom2.h"
+#include "instance/supc.h"
+#include "instance/tc0.h"
+#include "instance/tc1.h"
+#include "instance/tc2.h"
+#include "instance/tram.h"
+#include "instance/trng.h"
+#include "instance/wdt.h"
+
 /** \addtogroup SAML10E16A_id Peripheral Ids Definitions
  *  @{
  */
