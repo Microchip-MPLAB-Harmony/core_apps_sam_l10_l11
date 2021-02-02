@@ -1,0 +1,14 @@
+configName: sam_l10_xpro_keil
+folderName: ''
+format_version: v1.0
+frameworkPath: D:\Projects\h3
+processor: ATSAML10E16A
+projectName: async_usart_echo_sam_l10_xpro_keil
+settings:
+  PackageFilter: bsp;core;csp;net;
+  FORCE_OPTIMIZATION: 'false'
+  GENERATE_BACKUP: 'true'
+  TRUSTZONE: 'false'
+  CMSISPath: .\dev_packs\arm\CMSIS\5.6.0
+  MERGE_STRATEGY: OVERWRITE
+  DFPPath: .\dev_packs\Microchip\SAML10_DFP\3.1.63\atdf\ATSAML10E16A.atdf
