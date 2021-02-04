@@ -15,6 +15,9 @@
             <itemPath>../src/config/sam_l11_xpro/osal/osal_freertos.h</itemPath>
           </logicalFolder>
           <logicalFolder name="f1" displayName="peripheral" projectFiles="true">
+            <logicalFolder name="f2" displayName="nvic" projectFiles="true">
+              <itemPath>../src/config/sam_l11_xpro/peripheral/nvic/plib_nvic.h</itemPath>
+            </logicalFolder>
             <logicalFolder name="f1" displayName="port" projectFiles="true">
               <itemPath>../src/config/sam_l11_xpro/peripheral/port/plib_port.h</itemPath>
             </logicalFolder>
@@ -26,6 +29,8 @@
           <itemPath>../src/config/sam_l11_xpro/FreeRTOSConfig.h</itemPath>
           <itemPath>../src/config/sam_l11_xpro/user.h</itemPath>
           <itemPath>../src/config/sam_l11_xpro/configuration.h</itemPath>
+          <itemPath>../src/config/sam_l11_xpro/interrupts.h</itemPath>
+          <itemPath>../src/config/sam_l11_xpro/device_vectors.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="f4" displayName="FreeRTOS" projectFiles="true">
@@ -92,10 +97,44 @@
             <itemPath>../src/packs/ATSAML11E16A_DFP/component/trng.h</itemPath>
             <itemPath>../src/packs/ATSAML11E16A_DFP/component/wdt.h</itemPath>
           </logicalFolder>
+          <logicalFolder name="f3" displayName="instance" projectFiles="true">
+            <itemPath>../src/packs/ATSAML11E16A_DFP/instance/ac.h</itemPath>
+            <itemPath>../src/packs/ATSAML11E16A_DFP/instance/adc.h</itemPath>
+            <itemPath>../src/packs/ATSAML11E16A_DFP/instance/ccl.h</itemPath>
+            <itemPath>../src/packs/ATSAML11E16A_DFP/instance/dac.h</itemPath>
+            <itemPath>../src/packs/ATSAML11E16A_DFP/instance/dmac.h</itemPath>
+            <itemPath>../src/packs/ATSAML11E16A_DFP/instance/dsu.h</itemPath>
+            <itemPath>../src/packs/ATSAML11E16A_DFP/instance/eic.h</itemPath>
+            <itemPath>../src/packs/ATSAML11E16A_DFP/instance/evsys.h</itemPath>
+            <itemPath>../src/packs/ATSAML11E16A_DFP/instance/freqm.h</itemPath>
+            <itemPath>../src/packs/ATSAML11E16A_DFP/instance/gclk.h</itemPath>
+            <itemPath>../src/packs/ATSAML11E16A_DFP/instance/idau.h</itemPath>
+            <itemPath>../src/packs/ATSAML11E16A_DFP/instance/mclk.h</itemPath>
+            <itemPath>../src/packs/ATSAML11E16A_DFP/instance/nvmctrl.h</itemPath>
+            <itemPath>../src/packs/ATSAML11E16A_DFP/instance/opamp.h</itemPath>
+            <itemPath>../src/packs/ATSAML11E16A_DFP/instance/osc32kctrl.h</itemPath>
+            <itemPath>../src/packs/ATSAML11E16A_DFP/instance/oscctrl.h</itemPath>
+            <itemPath>../src/packs/ATSAML11E16A_DFP/instance/pac.h</itemPath>
+            <itemPath>../src/packs/ATSAML11E16A_DFP/instance/pm.h</itemPath>
+            <itemPath>../src/packs/ATSAML11E16A_DFP/instance/port.h</itemPath>
+            <itemPath>../src/packs/ATSAML11E16A_DFP/instance/ptc.h</itemPath>
+            <itemPath>../src/packs/ATSAML11E16A_DFP/instance/rstc.h</itemPath>
+            <itemPath>../src/packs/ATSAML11E16A_DFP/instance/rtc.h</itemPath>
+            <itemPath>../src/packs/ATSAML11E16A_DFP/instance/sercom0.h</itemPath>
+            <itemPath>../src/packs/ATSAML11E16A_DFP/instance/sercom1.h</itemPath>
+            <itemPath>../src/packs/ATSAML11E16A_DFP/instance/sercom2.h</itemPath>
+            <itemPath>../src/packs/ATSAML11E16A_DFP/instance/supc.h</itemPath>
+            <itemPath>../src/packs/ATSAML11E16A_DFP/instance/tc0.h</itemPath>
+            <itemPath>../src/packs/ATSAML11E16A_DFP/instance/tc1.h</itemPath>
+            <itemPath>../src/packs/ATSAML11E16A_DFP/instance/tc2.h</itemPath>
+            <itemPath>../src/packs/ATSAML11E16A_DFP/instance/tram.h</itemPath>
+            <itemPath>../src/packs/ATSAML11E16A_DFP/instance/trng.h</itemPath>
+            <itemPath>../src/packs/ATSAML11E16A_DFP/instance/wdt.h</itemPath>
+          </logicalFolder>
           <logicalFolder name="f2" displayName="pio" projectFiles="true">
             <itemPath>../src/packs/ATSAML11E16A_DFP/pio/saml11e16a.h</itemPath>
           </logicalFolder>
-          <itemPath>../src/packs/ATSAML11E16A_DFP/atsaml11e16a.h</itemPath>
+          <itemPath>../src/packs/ATSAML11E16A_DFP/saml11e16a.h</itemPath>
         </logicalFolder>
         <logicalFolder name="f2" displayName="CMSIS" projectFiles="true">
           <logicalFolder name="f1" displayName="CMSIS" projectFiles="true">
@@ -127,6 +166,11 @@
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
                    projectFiles="true">
+      <logicalFolder name="f1" displayName="config" projectFiles="true">
+        <logicalFolder name="f1" displayName="sam_l11_xpro" projectFiles="true">
+          <itemPath>../src/config/sam_l11_xpro/ATSAML11E16A.ld</itemPath>
+        </logicalFolder>
+      </logicalFolder>
     </logicalFolder>
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
@@ -140,6 +184,9 @@
             <itemPath>../src/config/sam_l11_xpro/osal/osal_freertos.c</itemPath>
           </logicalFolder>
           <logicalFolder name="f2" displayName="peripheral" projectFiles="true">
+            <logicalFolder name="f2" displayName="nvic" projectFiles="true">
+              <itemPath>../src/config/sam_l11_xpro/peripheral/nvic/plib_nvic.c</itemPath>
+            </logicalFolder>
             <logicalFolder name="f1" displayName="port" projectFiles="true">
               <itemPath>../src/config/sam_l11_xpro/peripheral/port/plib_port.c</itemPath>
             </logicalFolder>
@@ -188,9 +235,22 @@
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
                    projectFiles="false">
+      <logicalFolder name="f1" displayName="sam_l11_xpro.mhc" projectFiles="true">
+        <itemPath>../src/config/sam_l11_xpro/sam_l11_xpro.mhc/BSP_SAM_L11_Xplained_Pro.yml</itemPath>
+        <itemPath>../src/config/sam_l11_xpro/sam_l11_xpro.mhc/cmsis.yml</itemPath>
+        <itemPath>../src/config/sam_l11_xpro/sam_l11_xpro.mhc/core.yml</itemPath>
+        <itemPath>../src/config/sam_l11_xpro/sam_l11_xpro.mhc/dfp.yml</itemPath>
+        <itemPath>../src/config/sam_l11_xpro/sam_l11_xpro.mhc/evsys.yml</itemPath>
+        <itemPath>../src/config/sam_l11_xpro/sam_l11_xpro.mhc/FreeRTOS.yml</itemPath>
+        <itemPath>../src/config/sam_l11_xpro/sam_l11_xpro.mhc/GraphSettings.yml</itemPath>
+        <itemPath>../src/config/sam_l11_xpro/sam_l11_xpro.mhc/HarmonyCore.yml</itemPath>
+        <itemPath>../src/config/sam_l11_xpro/sam_l11_xpro.mhc/nvmctrl.yml</itemPath>
+        <itemPath>../src/config/sam_l11_xpro/sam_l11_xpro.mhc/pm.yml</itemPath>
+        <itemPath>../src/config/sam_l11_xpro/sam_l11_xpro.mhc/project.yml</itemPath>
+        <itemPath>../src/config/sam_l11_xpro/sam_l11_xpro.mhc/settings.yml</itemPath>
+      </logicalFolder>
       <itemPath>Makefile</itemPath>
-      <itemPath>../src/config/sam_l11_xpro/harmony.prj</itemPath>
-      <itemPath>../src/config/sam_l11_xpro/sam_l11_xpro.xml</itemPath>
+      <itemPath>../src/config/sam_l11_xpro/harmony-manifest-success.yml</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
@@ -206,12 +266,12 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>EdbgTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>2.41</languageToolchainVersion>
+        <languageToolchainVersion>2.50</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="SAML11_DFP" vendor="Microchip" version="4.0.112"/>
         <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
+        <pack name="SAML11_DFP" vendor="Microchip" version="4.0.115"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
@@ -247,6 +307,7 @@
       </compileType>
       <makeCustomizationType>
         <makeCustomizationPreStepEnabled>false</makeCustomizationPreStepEnabled>
+        <makeUseCleanTarget>false</makeUseCleanTarget>
         <makeCustomizationPreStep></makeCustomizationPreStep>
         <makeCustomizationPostStepEnabled>false</makeCustomizationPostStepEnabled>
         <makeCustomizationPostStep></makeCustomizationPostStep>
@@ -340,7 +401,7 @@
         <property key="enable-check-sections" value="false"/>
         <property key="exclude-floating-point-library" value="false"/>
         <property key="exclude-standard-libraries" value="false"/>
-        <property key="extra-lib-directories" value="./;"/>
+        <property key="extra-lib-directories" value="./"/>
         <property key="fill-flash-options-addr" value=""/>
         <property key="fill-flash-options-const" value=""/>
         <property key="fill-flash-options-how" value="0"/>
@@ -362,7 +423,7 @@
         <property key="oXC32ld-extra-opts" value=""/>
         <property key="optimization-level" value=""/>
         <property key="preprocessor-macros"
-                  value="NONSECURE;;AS_SIZE=0x8000;BOOTPROT_SIZE=0x0;RS_SIZE=0x800"/>
+                  value="NONSECURE;AS_SIZE=0x8000;BOOTPROT_SIZE=0x0;RS_SIZE=0x800"/>
         <property key="remove-unused-sections" value="true"/>
         <property key="report-memory-usage" value="false"/>
         <property key="serial-length" value=""/>
@@ -428,6 +489,7 @@
         <property key="firmware.toolpack"
                   value="Press to select which tool pack to use"/>
         <property key="firmware.update.action" value="firmware.update.use.latest"/>
+        <property key="freeze.timers" value="false"/>
         <property key="lastid" value=""/>
         <property key="memories.aux" value="false"/>
         <property key="memories.bootflash" value="true"/>
@@ -442,9 +504,8 @@
                   value="${memories.instruction.ram.ranges}"/>
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-ffff"/>
+        <property key="memories.rww" value="true"/>
         <property key="poweroptions.powerenable" value="false"/>
-        <property key="programmerToGoFilePath"
-                  value="D:/H3/core_apps_sam_l10_l11/apps/rtos/freertos/basic_freertos_trustZone/NonSecure/firmware/sam_l11_xpro_NonSecure.X/debug/sam_l11_xpro/sam_l11_xpro_NonSecure_ptg"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.preservedataflash" value="false"/>
         <property key="programoptions.preservedataflash.ranges"

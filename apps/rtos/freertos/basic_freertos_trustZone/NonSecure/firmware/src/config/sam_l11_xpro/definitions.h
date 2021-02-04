@@ -49,6 +49,7 @@
 #include <stddef.h>
 #include <stdbool.h>
 #include "peripheral/port/plib_port.h"
+#include "peripheral/nvic/plib_nvic.h"
 #include "FreeRTOS.h"
 #include "task.h"
 #include "bsp/bsp.h"
@@ -66,6 +67,9 @@ extern "C" {
 
 #endif
 // DOM-IGNORE-END
+
+/* CPU clock frequency */
+#define CPU_CLOCK_FREQUENCY 32000000
 
 // *****************************************************************************
 // *****************************************************************************
