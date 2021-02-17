@@ -127,13 +127,13 @@
   },"21": {
     "doc": "USART driver asynchronous - UART echo",
     "title": "Downloading and building the application",
-    "content": "To clone or download this application from Github, go to the main page of this repository and then click Clone button to clone this repository or download as zip file. This content can also be downloaded using content manager by following these instructions. Path of the application within the repository is apps/driver/usart/async/usart_echo/firmware . To build the application, refer to the following table and open the project using its IDE. | Project Name | Description | . | sam_l10_xpro.X | MPLABX project for SAML10 Xplained Pro Evaluation Kit | . |   |   | . ",
+    "content": "To clone or download this application from Github, go to the main page of this repository and then click Clone button to clone this repository or download as zip file. This content can also be downloaded using content manager by following these instructions. Path of the application within the repository is apps/driver/usart/async/usart_echo/firmware . To build the application, refer to the following table and open the project using its IDE. | Project Name | Description | . | sam_l10_xpro.X | MPLABX project for SAML10 Xplained Pro Evaluation Kit | . | sam_l10_xpro_keil.KEIL/async_usart_echo_sam_l10_xpro_keil.uvprojx | KEIL project for SAML10 Xplained Pro Evaluation Kit | . |   |   | . ",
     "url": "http://localhost:4000/core_apps_sam_l10_l11/apps/driver/usart/async/usart_echo/readme.html#downloading-and-building-the-application",
     "relUrl": "/apps/driver/usart/async/usart_echo/readme.html#downloading-and-building-the-application"
   },"22": {
     "doc": "USART driver asynchronous - UART echo",
     "title": "Setting up the hardware",
-    "content": "The following table shows the target hardware for the application projects. | Project Name | Board | . | sam_l10_xpro.X | SAML10 Xplained Pro Evaluation Kit | . |   |   | . Setting up SAML10 Xplained Pro Evaluation Kit . | Connect the Debug USB port on the board to the computer using a micro USB cable | . ",
+    "content": "The following table shows the target hardware for the application projects. | Project Name | Board | . | sam_l10_xpro.X or sam_l10_xpro_keil.KEIL/async_usart_echo_sam_l10_xpro_keil.uvprojx | SAML10 Xplained Pro Evaluation Kit | . |   |   | . Setting up SAML10 Xplained Pro Evaluation Kit . | Connect the Debug USB port on the board to the computer using a micro USB cable | . ",
     "url": "http://localhost:4000/core_apps_sam_l10_l11/apps/driver/usart/async/usart_echo/readme.html#setting-up-the-hardware",
     "relUrl": "/apps/driver/usart/async/usart_echo/readme.html#setting-up-the-hardware"
   },"23": {
@@ -187,13 +187,13 @@
   },"31": {
     "doc": "FreeRTOS basic",
     "title": "FreeRTOS basic",
-    "content": "This example application blinks an LED to show the FreeRTOS threads that are running and to indicate status. ",
+    "content": "This example application demonstrates context switching between four tasks of different priorites. Two tasks run periodically while the other two tasks are event driven. ",
     "url": "http://localhost:4000/core_apps_sam_l10_l11/apps/rtos/freertos/basic_freertos/readme.html#freertos-basic",
     "relUrl": "/apps/rtos/freertos/basic_freertos/readme.html#freertos-basic"
   },"32": {
     "doc": "FreeRTOS basic",
     "title": "Description",
-    "content": "This demonstration creates three tasks and a queue. Task1 sends message to Task2 and Task3 to unblock and toggle an LED. Task1 priority is low compared to Task2 and Task3 which shares same priority. | Task1: This task sends the data (i.e. delay, the amount of time for which the task need blocked) to Task2 and Task3 using a queue, then Task1 blocks itself for 200ms to allow other tasks to schedule and run | Task2: This task blocks until it receives the data from queue, if the Task2 receives the expected delay (i.e. 1000ms) from Task1 then toggles the LED and blocks itself for the amount of delay received | Task3: This task blocks until it receives the data from queue, if the Task3 receives the expected delay (i.e. 100ms) from Task1 then toggles the LED and blocks itself for the amount of delay received | . ",
+    "content": "This demonstration creates four tasks each of differen priority. Task1 has the lowest priority, followed by Task2, Task3 and Task4 which has the highest priority. Task1 and Task2 run periodically. Task3 blocks until a character is received on UART terminal. Task3 registers a read callback with the UART PLIB and blcoks on a UART receive semaphore. The semaphore is given from the registered callback which is called when a character is receved on the terminal. Task4 blocks until a user switch is pressed. Task4 registers a callback for the switch press event with the EIC peripheral and then blocks on the switch press semaphore. The semaphore is given from the registered callback which is called when the switch is pressed. All the tasks print messages on the UART terminal to indicate tasks entry/exit. Since all the tasks use the same UART peripheral library, a mutex is used to guard the shared resource (UART ring buffer). | Task1: Task1 is configured for priority 1 (lowest of all the application tasks). The task1 runs for about 100 ticks and then blocks for 10 milliseconds. Each time task1 is run, it prints a message on the UART console “Tsk1-P1 &lt;-“ where, the &lt;- symbol indicates that task1 is running. Just before blocking it prints another message on the UART console “Tsk1-P1 -&gt;” where, the -&gt; symbol indicates that task1 is about to put itself into a blocked state. | Task2: Task2 is configured for priority 2. The task2 runs for about 10 ticks and then blocks for 250 milliseconds. Each time task2 is run, it prints a message on the UART console “Tsk2-P2 &lt;-“ where, the &lt;- symbol indicates that task2 is running. Just before blocking it prints another message on the UART console “Tsk2-P2 -&gt;” where, the -&gt; symbol indicates that task2 is about to put itself into a blocked state. | Task3: Task3 is configured for priority 3. It remains blocked on a semaphore which is released when a character is entered on the UART console. Once active, the task reads out the received characters and toggles LED if letter ‘L’ or ‘l’ is pressed. The task then runs for about 50 ticks, before again blocking itself until a new character is received. Each time task3 is run, it prints a message on the UART console “Tsk3-P3 &lt;-“ where, the &lt;- symbol indicates that task2 is running. Just before blocking it prints another message on the UART console “Tsk3-P3 -&gt;” where, the -&gt; symbol indicates that task3 is about to put itself into a blocked state. | Task4: Task4 is configured for priority 4 (highest of all the application tasks). It remains blocked on a semaphore which is released when a user switch is pressed. Once active, the task runs for about 10 ticks, before again blocking itself until the switch is pressed again. Each time task4 is run, it prints a message on the UART console “Tsk4-P4 &lt;-“ where, the &lt;- symbol indicates that task4 is running. Just before blocking it prints another message on the UART console “Tsk4-P4 -&gt;” where, the -&gt; symbol indicates that task4 is about to put itself into a blocked state. | . The following figure shows possible context switching between the tasks. ",
     "url": "http://localhost:4000/core_apps_sam_l10_l11/apps/rtos/freertos/basic_freertos/readme.html#description",
     "relUrl": "/apps/rtos/freertos/basic_freertos/readme.html#description"
   },"33": {
@@ -211,253 +211,271 @@
   },"35": {
     "doc": "FreeRTOS basic",
     "title": "Running the Application",
-    "content": ". | Build and program the application using its IDE | The LED indicates the success or failure. | The LED toggles on success i.e. each time when the Task2 or Task3 receives a valid message | . | . Refer to the following table for LED name: . | Board | LED Name | . | SAML10 Xplained Pro Evaluation Kit | LED0 | . |   |   | . ",
+    "content": " ",
     "url": "http://localhost:4000/core_apps_sam_l10_l11/apps/rtos/freertos/basic_freertos/readme.html#running-the-application",
     "relUrl": "/apps/rtos/freertos/basic_freertos/readme.html#running-the-application"
   },"36": {
+    "doc": "FreeRTOS basic",
+    "title": "Running the Application",
+    "content": ". | Open the Terminal application (Ex.:Tera Term) on the computer. | Connect to the EDBG Virtual COM port and configure the serial settings as follows: . Baud : 115200 . Data : 8 Bits . Parity : None . Stop : 1 Bit . Flow Control : None . | Build and program the application using its IDE. | Observe the following output on the terminal. | Enter any character on the terminal to run task3. Notice how task1 and task2 are pre-empted by task3 as task3 is of higher priority than task1 and task2. Pressing character ‘l’ or “L’ toggles the on board LED. Notice how task1 and task2 are not run when characters are entered continuously on the terminal. | Press the user switch on the board to run task4. Notice how task4 preempts all other tasks as it is of highest priority. | . Refer to the following table for LED and Switch name: . | Board | LED Name | Switch Name | . | SAML10 Xplained Pro Evaluation Kit | LED0 | SW0 | . |   |   |   | . ",
+    "url": "http://localhost:4000/core_apps_sam_l10_l11/apps/rtos/freertos/basic_freertos/readme.html#running-the-application-1",
+    "relUrl": "/apps/rtos/freertos/basic_freertos/readme.html#running-the-application-1"
+  },"37": {
     "doc": "FreeRTOS basic",
     "title": "FreeRTOS basic",
     "content": ". ",
     "url": "http://localhost:4000/core_apps_sam_l10_l11/apps/rtos/freertos/basic_freertos/readme.html",
     "relUrl": "/apps/rtos/freertos/basic_freertos/readme.html"
-  },"37": {
+  },"38": {
     "doc": "Title",
     "title": "Title",
     "content": "short_description . ",
     "url": "http://localhost:4000/core_apps_sam_l10_l11/apps/rtos/freertos/basic_freertos_trustZone/NonSecure/readme.html#title",
     "relUrl": "/apps/rtos/freertos/basic_freertos_trustZone/NonSecure/readme.html#title"
-  },"38": {
+  },"39": {
     "doc": "Title",
     "title": "Description",
     "content": "long_description . ",
     "url": "http://localhost:4000/core_apps_sam_l10_l11/apps/rtos/freertos/basic_freertos_trustZone/NonSecure/readme.html#description",
     "relUrl": "/apps/rtos/freertos/basic_freertos_trustZone/NonSecure/readme.html#description"
-  },"39": {
+  },"40": {
     "doc": "Title",
     "title": "Downloading and building the application",
     "content": "To clone or download this application from Github, go to the main page of this repository and then click Clone button to clone this repository or download as zip file. This content can also be downloaded using content manager by following these instructions. Path of the application within the repository is apps/rtos/freertos/basic_freertos_trustZone/NonSecure/firmware . To build the application, refer to the following table and open the project using its IDE. | Project Name | Description | . | sam_l11_xpro_NonSecure.X | MPLABX project for SAML11 Xplained Pro Evaluation Kit | . |   |   | . ",
     "url": "http://localhost:4000/core_apps_sam_l10_l11/apps/rtos/freertos/basic_freertos_trustZone/NonSecure/readme.html#downloading-and-building-the-application",
     "relUrl": "/apps/rtos/freertos/basic_freertos_trustZone/NonSecure/readme.html#downloading-and-building-the-application"
-  },"40": {
+  },"41": {
     "doc": "Title",
     "title": "Setting up the hardware",
     "content": "The following table shows the target hardware for the application projects. | Project Name | Board | . | sam_l11_xpro_NonSecure.X | SAML11 Xplained Pro Evaluation Kit | . |   |   | . Setting up SAML11 Xplained Pro Evaluation Kit . | Connect the Debug USB port on the board to the computer using a micro USB cable | . ",
     "url": "http://localhost:4000/core_apps_sam_l10_l11/apps/rtos/freertos/basic_freertos_trustZone/NonSecure/readme.html#setting-up-the-hardware",
     "relUrl": "/apps/rtos/freertos/basic_freertos_trustZone/NonSecure/readme.html#setting-up-the-hardware"
-  },"41": {
+  },"42": {
     "doc": "Title",
     "title": "Running the Application",
     "content": ". | Build and program the application using its IDE | . Refer to the following table for LED name: . | Board | LED Name | . | SAML11 Xplained Pro Evaluation Kit | LED0 | . |   |   | . ",
     "url": "http://localhost:4000/core_apps_sam_l10_l11/apps/rtos/freertos/basic_freertos_trustZone/NonSecure/readme.html#running-the-application",
     "relUrl": "/apps/rtos/freertos/basic_freertos_trustZone/NonSecure/readme.html#running-the-application"
-  },"42": {
+  },"43": {
     "doc": "Title",
     "title": "Title",
     "content": ". ",
     "url": "http://localhost:4000/core_apps_sam_l10_l11/apps/rtos/freertos/basic_freertos_trustZone/NonSecure/readme.html",
     "relUrl": "/apps/rtos/freertos/basic_freertos_trustZone/NonSecure/readme.html"
-  },"43": {
+  },"44": {
     "doc": "Title",
     "title": "Title",
     "content": "short_description . ",
     "url": "http://localhost:4000/core_apps_sam_l10_l11/apps/rtos/freertos/basic_freertos_trustZone/Secure/readme.html#title",
     "relUrl": "/apps/rtos/freertos/basic_freertos_trustZone/Secure/readme.html#title"
-  },"44": {
+  },"45": {
     "doc": "Title",
     "title": "Description",
     "content": "long_description . ",
     "url": "http://localhost:4000/core_apps_sam_l10_l11/apps/rtos/freertos/basic_freertos_trustZone/Secure/readme.html#description",
     "relUrl": "/apps/rtos/freertos/basic_freertos_trustZone/Secure/readme.html#description"
-  },"45": {
+  },"46": {
     "doc": "Title",
     "title": "Downloading and building the application",
     "content": "To clone or download this application from Github, go to the main page of this repository and then click Clone button to clone this repository or download as zip file. This content can also be downloaded using content manager by following these instructions. Path of the application within the repository is apps/rtos/freertos/basic_freertos_trustZone/Secure/firmware . To build the application, refer to the following table and open the project using its IDE. | Project Name | Description | . | sam_l11_xpro_Secure.X | MPLABX project for SAML11 Xplained Pro Evaluation Kit | . |   |   | . ",
     "url": "http://localhost:4000/core_apps_sam_l10_l11/apps/rtos/freertos/basic_freertos_trustZone/Secure/readme.html#downloading-and-building-the-application",
     "relUrl": "/apps/rtos/freertos/basic_freertos_trustZone/Secure/readme.html#downloading-and-building-the-application"
-  },"46": {
+  },"47": {
     "doc": "Title",
     "title": "Setting up the hardware",
     "content": "The following table shows the target hardware for the application projects. | Project Name | Board | . | sam_l11_xpro_Secure.X | SAML11 Xplained Pro Evaluation Kit | . |   |   | . Setting up SAML11 Xplained Pro Evaluation Kit . | Connect the Debug USB port on the board to the computer using a micro USB cable | . ",
     "url": "http://localhost:4000/core_apps_sam_l10_l11/apps/rtos/freertos/basic_freertos_trustZone/Secure/readme.html#setting-up-the-hardware",
     "relUrl": "/apps/rtos/freertos/basic_freertos_trustZone/Secure/readme.html#setting-up-the-hardware"
-  },"47": {
+  },"48": {
     "doc": "Title",
     "title": "Running the Application",
     "content": ". | Build and program the application using its IDE | . Refer to the following table for LED name: . | Board | LED Name | . | SAML11 Xplained Pro Evaluation Kit | LED0 | . |   |   | . ",
     "url": "http://localhost:4000/core_apps_sam_l10_l11/apps/rtos/freertos/basic_freertos_trustZone/Secure/readme.html#running-the-application",
     "relUrl": "/apps/rtos/freertos/basic_freertos_trustZone/Secure/readme.html#running-the-application"
-  },"48": {
+  },"49": {
     "doc": "Title",
     "title": "Title",
     "content": ". ",
     "url": "http://localhost:4000/core_apps_sam_l10_l11/apps/rtos/freertos/basic_freertos_trustZone/Secure/readme.html",
     "relUrl": "/apps/rtos/freertos/basic_freertos_trustZone/Secure/readme.html"
-  },"49": {
+  },"50": {
     "doc": "TrustZone FreeRTOS basic",
     "title": "TrustZone FreeRTOS basic",
     "content": "This example application blinks an LED to show the FreeRTOS threads that are running in non-secure mode and to indicate status. ",
     "url": "http://localhost:4000/core_apps_sam_l10_l11/apps/rtos/freertos/basic_freertos_trustZone/readme.html#trustzone-freertos-basic",
     "relUrl": "/apps/rtos/freertos/basic_freertos_trustZone/readme.html#trustzone-freertos-basic"
-  },"50": {
+  },"51": {
     "doc": "TrustZone FreeRTOS basic",
     "title": "Description",
     "content": "This demonstrates TrustZone feature and uses two projects viz., Secure and Non-Secure Project that work together on the same MCU and offering security isolation between the Trusted and the Non-trusted resources in the device. FreeRTOS and BSP are configured and run in Non-Secure mode. This demonstration creates three tasks and a queue. Task1 sends message to Task2 and Task3 to unblock and toggle an LED. Task1 priority is low compared to Task2 and Task3 which shares same priority. | Task1: This task sends the data (i.e. delay, the amount of time for which the task need blocked) to Task2 and Task3 using a queue, then Task1 blocks itself for 200ms to allow other tasks to schedule and run | Task2: This task blocks until it receives the data from queue, if the Task2 receives the expected delay (i.e. 1000ms) from Task1 then toggles the LED and blocks itself for the amount of delay received | Task3: This task blocks until it receives the data from queue, if the Task3 receives the expected delay (i.e. 100ms) from Task1 then toggles the LED and blocks itself for the amount of delay received | . ",
     "url": "http://localhost:4000/core_apps_sam_l10_l11/apps/rtos/freertos/basic_freertos_trustZone/readme.html#description",
     "relUrl": "/apps/rtos/freertos/basic_freertos_trustZone/readme.html#description"
-  },"51": {
+  },"52": {
     "doc": "TrustZone FreeRTOS basic",
     "title": "Downloading and building the application",
     "content": "To clone or download this application from Github, go to the main page of this repository and then click Clone button to clone this repository or download as zip file. This content can also be downloaded using content manager by following these instructions. Path of the application within the repository is as shown below: . | Type | Path |   | . | Project group | apps/rtos/freertos/basic_freertos_trustZone |   | . | Secure Project | apps/rtos/freertos/basic_freertos_trustZone/Secure/firmware |   | . | Non-Secure Project | apps/rtos/freertos/basic_freertos_trustZone/NonSecure/firmware |   | . |   |   |   | . To build the application, refer to the following table and open the project using its IDE. | Project Name | Description | . | sam_l11_xpro_Secure.X sam_l11_xpro_NonSecure.X | Secure and Non-secure MPLABX project for SAML11 Xplained Pro Evaluation Kit | . |   |   | . ",
     "url": "http://localhost:4000/core_apps_sam_l10_l11/apps/rtos/freertos/basic_freertos_trustZone/readme.html#downloading-and-building-the-application",
     "relUrl": "/apps/rtos/freertos/basic_freertos_trustZone/readme.html#downloading-and-building-the-application"
-  },"52": {
+  },"53": {
     "doc": "TrustZone FreeRTOS basic",
     "title": "Setting up the hardware",
     "content": "The following table shows the target hardware for the application projects. | Project Name | Board | . | sam_l11_xpro_Secure.X sam_l11_xpro_NonSecure.X | SAML11 Xplained Pro Evaluation Kit | . |   |   | . Setting up SAML11 Xplained Pro Evaluation Kit . | Connect the Debug USB port on the board to the computer using a micro USB cable | . ",
     "url": "http://localhost:4000/core_apps_sam_l10_l11/apps/rtos/freertos/basic_freertos_trustZone/readme.html#setting-up-the-hardware",
     "relUrl": "/apps/rtos/freertos/basic_freertos_trustZone/readme.html#setting-up-the-hardware"
-  },"53": {
+  },"54": {
     "doc": "TrustZone FreeRTOS basic",
     "title": "Running the Application",
     "content": ". | Build and program the application using its IDE | The LED indicates the success or failure. | The LED toggles on success i.e. each time when the Task2 or Task3 receives a valid message | . | . Refer to the following table for LED name: . | Board | LED Name | . | SAML11 Xplained Pro Evaluation Kit | LED0 | . |   |   | . ",
     "url": "http://localhost:4000/core_apps_sam_l10_l11/apps/rtos/freertos/basic_freertos_trustZone/readme.html#running-the-application",
     "relUrl": "/apps/rtos/freertos/basic_freertos_trustZone/readme.html#running-the-application"
-  },"54": {
+  },"55": {
     "doc": "TrustZone FreeRTOS basic",
     "title": "TrustZone FreeRTOS basic",
     "content": ". ",
     "url": "http://localhost:4000/core_apps_sam_l10_l11/apps/rtos/freertos/basic_freertos_trustZone/readme.html",
     "relUrl": "/apps/rtos/freertos/basic_freertos_trustZone/readme.html"
-  },"55": {
+  },"56": {
     "doc": "Console Debug System Service using UART",
     "title": "Console Debug System Service using UART",
     "content": "This example application demonstrates the UART based console and debug system service. ",
     "url": "http://localhost:4000/core_apps_sam_l10_l11/apps/system/console_debug/sys_console_debug_uart_read_write/readme.html#console-debug-system-service-using-uart",
     "relUrl": "/apps/system/console_debug/sys_console_debug_uart_read_write/readme.html#console-debug-system-service-using-uart"
-  },"56": {
+  },"57": {
     "doc": "Console Debug System Service using UART",
     "title": "Description",
     "content": ". | The application example first demonstrates the various debug system service macros | It then demonstrates the console related APIs | The application asks the user to enter a character on the console which is echoed back using the console system service read/write APIs | . ",
     "url": "http://localhost:4000/core_apps_sam_l10_l11/apps/system/console_debug/sys_console_debug_uart_read_write/readme.html#description",
     "relUrl": "/apps/system/console_debug/sys_console_debug_uart_read_write/readme.html#description"
-  },"57": {
+  },"58": {
     "doc": "Console Debug System Service using UART",
     "title": "Downloading and building the application",
     "content": "To clone or download this application from Github, go to the main page of this repository and then click Clone button to clone this repository or download as zip file. This content can also be downloaded using content manager by following these instructions. Path of the application within the repository is apps/system/console_debug/sys_console_debug_uart_read_write/firmware . To build the application, refer to the following table and open the project using its IDE. | Project Name | Description | . | sam_l10_xpro.X | MPLABX project for SAML10 Xplained Pro Evaluation Kit | . |   |   | . ",
     "url": "http://localhost:4000/core_apps_sam_l10_l11/apps/system/console_debug/sys_console_debug_uart_read_write/readme.html#downloading-and-building-the-application",
     "relUrl": "/apps/system/console_debug/sys_console_debug_uart_read_write/readme.html#downloading-and-building-the-application"
-  },"58": {
+  },"59": {
     "doc": "Console Debug System Service using UART",
     "title": "Setting up the hardware",
     "content": "The following table shows the target hardware for the application projects. | Project Name | Board | . | sam_l10_xpro.X | SAML10 Xplained Pro Evaluation Kit | . |   |   | . Setting up SAML10 Xplained Pro Evaluation Kit . | Connect the Debug USB port on the board to the computer using a micro USB cable | . ",
     "url": "http://localhost:4000/core_apps_sam_l10_l11/apps/system/console_debug/sys_console_debug_uart_read_write/readme.html#setting-up-the-hardware",
     "relUrl": "/apps/system/console_debug/sys_console_debug_uart_read_write/readme.html#setting-up-the-hardware"
-  },"59": {
+  },"60": {
     "doc": "Console Debug System Service using UART",
     "title": "Running the Application",
     "content": ". | Open the Terminal application (Ex.:Tera term) on the computer | Connect to the EDBG Virtual COM port and configure the serial settings as follows: . | Baud : 115200 | Data : 8 Bits | Parity : None | Stop : 1 Bit | Flow Control : None | . | Build and Program the application using its IDE | Observe the following output on the terminal . | First few prints demonstrate the output from the debug system service APIs | It then prints the free space available in the receive buffer | It then asks the user to enter 10 characters | . | After entering 10 characters, observe the following output on the terminal . | The output first prints the free space available in the receive buffer | Since 10 characters are pending to be read out from the receive buffer, the free space in the receive buffer is reduced by 10 | After this, it prints the received characters on the terminal | Application then waits for the transmit buffer to become empty | Once empty, the application prints the free space available in the transmit buffer, which should be same as the size of the transmit buffer configured in MHC minus 1 | . | After this, the demonstration asks the user to enter a character, and echoes it back on the terminal. | LED toggles every-time the character is printed on the terminal | . | . Refer to the following table for LED name: . | Board | LED Name | . | SAML10 Xplained Pro Evaluation Kit | LED0 | . |   |   | . ",
     "url": "http://localhost:4000/core_apps_sam_l10_l11/apps/system/console_debug/sys_console_debug_uart_read_write/readme.html#running-the-application",
     "relUrl": "/apps/system/console_debug/sys_console_debug_uart_read_write/readme.html#running-the-application"
-  },"60": {
+  },"61": {
     "doc": "Console Debug System Service using UART",
     "title": "Console Debug System Service using UART",
     "content": ". ",
     "url": "http://localhost:4000/core_apps_sam_l10_l11/apps/system/console_debug/sys_console_debug_uart_read_write/readme.html",
     "relUrl": "/apps/system/console_debug/sys_console_debug_uart_read_write/readme.html"
-  },"61": {
+  },"62": {
     "doc": "Time System Service multi-client",
     "title": "Time System Service multi-client",
     "content": "This example application demonstrates the multi-client system timer functionality . ",
     "url": "http://localhost:4000/core_apps_sam_l10_l11/apps/system/time/sys_time_multiclient/readme.html#time-system-service-multi-client",
     "relUrl": "/apps/system/time/sys_time_multiclient/readme.html#time-system-service-multi-client"
-  },"62": {
+  },"63": {
     "doc": "Time System Service multi-client",
     "title": "Description",
     "content": ". | This application demonstrates timer functionality (with two clients to the Time System Service) by periodically printing a message on console every two seconds and blinking an LED every one second . | Delay, counter and single shot timer functionality is demonstrated on a switch press . | On a switch press, the application reads the current value of the 64 bit counter (say, count 1) | It then starts a delay of 500 milliseconds and waits for the delay to expire | Once the delay has expired, the application again reads the current value of the 64 bit counter (say, count 2) and calculates the difference between the two counter values . | The difference count indicates the time spent for the delay and is printed on the console as, “Delay time = x ms”, where x is the delay value and is equal to 500 milliseconds in the given example . | The application then starts a single shot timer of 100 milliseconds | When the single shot timer expires, a message is printed on the console that says “Single shot timer of 100 ms expired” | This message is printed only once on every switch press | . ",
     "url": "http://localhost:4000/core_apps_sam_l10_l11/apps/system/time/sys_time_multiclient/readme.html#description",
     "relUrl": "/apps/system/time/sys_time_multiclient/readme.html#description"
-  },"63": {
+  },"64": {
     "doc": "Time System Service multi-client",
     "title": "Downloading and building the application",
     "content": "To clone or download this application from Github, go to the main page of this repository and then click Clone button to clone this repository or download as zip file. This content can also be downloaded using content manager by following these instructions. Path of the application within the repository is apps/system/time/sys_time_multiclient/firmware . To build the application, refer to the following table and open the project using its IDE. | Project Name | Description | . | sam_l10_xpro.X | MPLABX project for SAML10 Xplained Pro Evaluation Kit | . |   |   | . ",
     "url": "http://localhost:4000/core_apps_sam_l10_l11/apps/system/time/sys_time_multiclient/readme.html#downloading-and-building-the-application",
     "relUrl": "/apps/system/time/sys_time_multiclient/readme.html#downloading-and-building-the-application"
-  },"64": {
+  },"65": {
     "doc": "Time System Service multi-client",
     "title": "Setting up the hardware",
     "content": "The following table shows the target hardware for the application projects. | Project Name | Board | . | sam_l10_xpro.X | SAML10 Xplained Pro Evaluation Kit | . |   |   | . Setting up SAML10 Xplained Pro Evaluation Kit . | Connect the Debug USB port on the board to the computer using a micro USB cable | . ",
     "url": "http://localhost:4000/core_apps_sam_l10_l11/apps/system/time/sys_time_multiclient/readme.html#setting-up-the-hardware",
     "relUrl": "/apps/system/time/sys_time_multiclient/readme.html#setting-up-the-hardware"
-  },"65": {
+  },"66": {
     "doc": "Time System Service multi-client",
     "title": "Running the Application",
     "content": ". | Open the Terminal application (Ex.:Tera term) on the computer | Connect to the EDBG Virtual COM port and configure the serial settings as follows: . | Baud : 115200 | Data : 8 Bits | Parity : None | Stop : 1 Bit | Flow Control : None | . | Build and Program the application using its IDE | Observe the following message getting printed on the console every two seconds . | Press the switch and observe the following output on the terminal (highlighted in red box) . | “Delay time = 500 ms” indicates the amount of time spent during the delay | “Single shot timer of 100 ms expired” is printed only once on every switch press | . | LED indicates the periodic timer functionality . | LED is toggled periodically every one second | . | . Refer to the following table for switch and LED name: . | Board | Switch name | LED Name | . | SAML10 Xplained Pro Evaluation Kit | SW0 | LED0 | . |   |   |   | . ",
     "url": "http://localhost:4000/core_apps_sam_l10_l11/apps/system/time/sys_time_multiclient/readme.html#running-the-application",
     "relUrl": "/apps/system/time/sys_time_multiclient/readme.html#running-the-application"
-  },"66": {
+  },"67": {
     "doc": "Time System Service multi-client",
     "title": "Time System Service multi-client",
     "content": ". ",
     "url": "http://localhost:4000/core_apps_sam_l10_l11/apps/system/time/sys_time_multiclient/readme.html",
     "relUrl": "/apps/system/time/sys_time_multiclient/readme.html"
-  },"67": {
+  },"68": {
     "doc": "I2C driver asynchronous - I2C EEPROM",
     "title": "I2C driver asynchronous - I2C EEPROM",
     "content": "This example application shows how to use the I2C driver in asynchronous mode to perform operations on the EEPROM. ",
     "url": "http://localhost:4000/core_apps_sam_l10_l11/apps/driver/i2c/async/i2c_eeprom/readme.html#i2c-driver-asynchronous---i2c-eeprom",
     "relUrl": "/apps/driver/i2c/async/i2c_eeprom/readme.html#i2c-driver-asynchronous---i2c-eeprom"
-  },"68": {
+  },"69": {
     "doc": "I2C driver asynchronous - I2C EEPROM",
     "title": "Description",
     "content": "This example uses the I2C driver in asynchronous mode to communicate with the EEPROM to perform write and read operations in Bare-Metal environment. This application uses I2C driver to read and write data from an AT24CM02 EEPROM device. ",
     "url": "http://localhost:4000/core_apps_sam_l10_l11/apps/driver/i2c/async/i2c_eeprom/readme.html#description",
     "relUrl": "/apps/driver/i2c/async/i2c_eeprom/readme.html#description"
-  },"69": {
+  },"70": {
     "doc": "I2C driver asynchronous - I2C EEPROM",
     "title": "Downloading and building the application",
     "content": "To clone or download this application from Github, go to the main page of this repository and then click Clone button to clone this repository or download as zip file. This content can also be downloaded using content manager by following these instructions. Path of the application within the repository is apps/driver/i2c/async/i2c_eeprom/firmware . To build the application, refer to the following table and open the project using its IDE. | Project Name | Description | . | sam_l10_xpro.X | MPLABX project for SAML10 Xplained Pro Evaluation Kit | . |   |   | . ",
     "url": "http://localhost:4000/core_apps_sam_l10_l11/apps/driver/i2c/async/i2c_eeprom/readme.html#downloading-and-building-the-application",
     "relUrl": "/apps/driver/i2c/async/i2c_eeprom/readme.html#downloading-and-building-the-application"
-  },"70": {
+  },"71": {
     "doc": "I2C driver asynchronous - I2C EEPROM",
     "title": "Setting up the hardware",
-    "content": "The following table shows the target hardware for the application projects. | Project Name | Board | . | sam_l10_xpro.X | SAML10 Xplained Pro Evaluation Kit | . |   |   | . Setting up SAML10 Xplained Pro Evaluation Kit . | To run the demo, the following additional hardware are required: . | One EEPROM 3 Click board | One mikroBUS Xplained Pro boards | . | Connect mikroBUS Xplained Pro board to EXT1 header | Plug the EEPROM 3 click Board into the MikroBus socket of the mikroBUS Xplained Pro board | Connect the Debug USB port on the board to the computer using a micro USB cable | . ",
+    "content": "The following table shows the target hardware for the application projects. | Project Name | Board | . | sam_l10_xpro.X | SAML10 Xplained Pro Evaluation Kit | . |   |   | . Setting up SAML10 Xplained Pro Evaluation Kit . | To run the demo, one EEPROM 3 Click board is required . | Connect EEPROM 3 click Board on to the mikroBUS header | Connect the Debug USB port on the board to the computer using a micro USB cable | . ",
     "url": "http://localhost:4000/core_apps_sam_l10_l11/apps/driver/i2c/async/i2c_eeprom/readme.html#setting-up-the-hardware",
     "relUrl": "/apps/driver/i2c/async/i2c_eeprom/readme.html#setting-up-the-hardware"
-  },"71": {
+  },"72": {
     "doc": "I2C driver asynchronous - I2C EEPROM",
     "title": "Running the Application",
     "content": ". | Build and program the application using its IDE | LED indicates success or failure: . | The LED is turned ON when the value read from the EEPROM matched with the written value | . | . Refer to the following table for LED name: . | Board | LED Name | . | SAML10 Xplained Pro Evaluation Kit | LED0 | . |   |   | . ",
     "url": "http://localhost:4000/core_apps_sam_l10_l11/apps/driver/i2c/async/i2c_eeprom/readme.html#running-the-application",
     "relUrl": "/apps/driver/i2c/async/i2c_eeprom/readme.html#running-the-application"
-  },"72": {
+  },"73": {
     "doc": "I2C driver asynchronous - I2C EEPROM",
     "title": "I2C driver asynchronous - I2C EEPROM",
     "content": ". ",
     "url": "http://localhost:4000/core_apps_sam_l10_l11/apps/driver/i2c/async/i2c_eeprom/readme.html",
     "relUrl": "/apps/driver/i2c/async/i2c_eeprom/readme.html"
-  },"73": {
+  },"74": {
     "doc": "Release notes",
     "title": "Microchip MPLAB® Harmony 3 Release Notes",
     "content": " ",
     "url": "http://localhost:4000/core_apps_sam_l10_l11/release_notes.html#microchip-mplab-harmony-3-release-notes",
     "relUrl": "/release_notes.html#microchip-mplab-harmony-3-release-notes"
-  },"74": {
+  },"75": {
+    "doc": "Release notes",
+    "title": "Harmony 3 peripheral library application examples for SAM L10/L11 family  v3.1.0",
+    "content": "Development kit and demo application support . Following table provides number of peripheral library examples available for different development kits. | Development Kits | MPLABx applications | KEIL applications | . | SAML10 Xplained Pro Evaluation Kit | 9 | 1 | . | SAML11 Xplained Pro Evaluation Kit | 2 | 0 | . New Features . | None | . Known Issues . | None | . Development Tools . | MPLAB® X IDE v5.45 | MPLAB® X IDE plug-ins: . | MPLAB® Harmony Configurator (MHC) v3.7.0 | . | MPLAB® XC32 C/C++ Compiler v2.50 | KEIL MDK v5.30 or above | . ",
+    "url": "http://localhost:4000/core_apps_sam_l10_l11/release_notes.html#harmony-3-peripheral-library-application-examples-for-sam-l10l11-family--v310",
+    "relUrl": "/release_notes.html#harmony-3-peripheral-library-application-examples-for-sam-l10l11-family--v310"
+  },"76": {
+    "doc": "Release notes",
+    "title": "Harmony 3 driver and system service application examples for SAM L10/L11 family  v3.0.1",
+    "content": "New Features . | Added discover.microchip.com metadata | . Bug fixes . | Same as v3.0.0 | . Known Issues . | Same as v3.0.0 | . Development Tools . | Same as v3.0.0 | . ",
+    "url": "http://localhost:4000/core_apps_sam_l10_l11/release_notes.html#harmony-3-driver-and-system-service-application-examples-for-sam-l10l11-family--v301",
+    "relUrl": "/release_notes.html#harmony-3-driver-and-system-service-application-examples-for-sam-l10l11-family--v301"
+  },"77": {
     "doc": "Release notes",
     "title": "Harmony 3 driver and system service application examples for SAM L10/L11 family  v3.0.0",
     "content": "Development kit and demo application support . Following table provides number of peripheral library examples available for different development kits. | Development Kits | MPLABx applications | KEIL applications | . | SAML11 Xplained Pro Evaluation Kit | 2 | 0 | . | SAML10 Xplained Pro Evaluation Kit | 9 | 1 | . New Features . New features added in this release are as follows: . | Applications migrated from csp repository to this new application repository for SAM L10/L11 development boards | . Known Issues . The current known issues are as follows: . | The following product family requires newer DFP version to be downloaded from packs server and to be used in the MPLAB project to build with MPLAB X IDE v5.4. | SAM L10/L11 Family: SAML10_DFP v3.3.82, SAML11_DFP v4.0.114 | . | . Development Tools . | MPLAB® X IDE v5.40 | MPLAB® X IDE plug-ins: . | MPLAB® Harmony Configurator (MHC) v3.6.0 | . | MPLAB® XC32 C/C++ Compiler v2.41 | KEIL MDK v5.30 or above | . ",
     "url": "http://localhost:4000/core_apps_sam_l10_l11/release_notes.html#harmony-3-driver-and-system-service-application-examples-for-sam-l10l11-family--v300",
     "relUrl": "/release_notes.html#harmony-3-driver-and-system-service-application-examples-for-sam-l10l11-family--v300"
-  },"75": {
+  },"78": {
     "doc": "Release notes",
     "title": "Release notes",
     "content": ". ",
     "url": "http://localhost:4000/core_apps_sam_l10_l11/release_notes.html",
     "relUrl": "/release_notes.html"
-  },"76": {
+  },"79": {
     "doc": "Harmony 3 driver and system service application examples for SAM L10/L11 family",
     "title": "Harmony 3 driver and system service application examples for SAM L10/L11 family",
-    "content": "[![MCHP](https://www.microchip.com/ResourcePackages/Microchip/assets/dist/images/logo.png)](https://www.microchip.com) # Harmony 3 driver and system service application examples for SAM L10/L11 family MPLAB® Harmony 3 is an extension of the MPLAB® ecosystem for creating embedded firmware solutions for Microchip 32-bit SAM and PIC® microcontroller and microprocessor devices. Refer to the following links for more information. - [Microchip 32-bit MCUs](https://www.microchip.com/design-centers/32-bit) - [Microchip 32-bit MPUs](https://www.microchip.com/design-centers/32-bit-mpus) - [Microchip MPLAB X IDE](https://www.microchip.com/mplab/mplab-x-ide) - [Microchip MPLAB® Harmony](https://www.microchip.com/mplab/mplab-harmony) - [Microchip MPLAB® Harmony Pages](https://microchip-mplab-harmony.github.io/) This repository contains the MPLAB® Harmony 3 driver and system service application examples for SAM L10/L11 family - [Release Notes](/core_apps_sam_l10_l11/release_notes.html) - [MPLAB® Harmony License](/core_apps_sam_l10_l11/mplab_harmony_license.html) To clone or download these applications from Github, go to the [main page of this repository](https://github.com/Microchip-MPLAB-Harmony/core_apps_sam_l10_l11) and then click **Clone** button to clone this repository or download as zip file. This content can also be downloaded using content manager by following these [instructions](https://github.com/Microchip-MPLAB-Harmony/contentmanager/wiki). ## Contents Summary | Folder | Description | --- | --- | apps | Contains driver and system service example applications | docs | Contains documentation in html format for offline viewing (to be used only after cloning this repository onto a local machine). Use [github pages](https://microchip-mplab-harmony.github.io/core_apps_sam_l10_l11/) of this repository for viewing it online. | ## Code Examples The following applications are provided to demonstrate the typical or interesting usage models of one or more peripheral libraries. | Name | Description | ---- | ----------- | [I2C driver asynchronous - I2C EEPROM](/core_apps_sam_l10_l11/apps/driver/i2c/async/i2c_eeprom/readme.html) | This example application shows how to use the I2C driver in asynchronous mode to perform operations on the EEPROM | [I2C driver asynchronous - I2C Multi-client](/core_apps_sam_l10_l11/apps/driver/i2c/async/i2c_multi_slave/readme.html) | This example application shows how to use multi-client feature of the I2C driver in asynchronous mode to communicate with temperature sensor and an EEPROM | [SDSPI driver asynchronous - SDSPI Read Write](/core_apps_sam_l10_l11/apps/driver/sdspi/async/sdspi_read_write/readme.html) | This example application shows how to use the SDSPI driver in asynchronous mode to perform non-blocking operations on the SD Card Media | [SPI Driver asynchronous - multi slave ](/core_apps_sam_l10_l11/apps/driver/spi/async/spi_multi_slave/readme.html) | This example demonstrates how to use single instance of the SPI driver in asynchronous mode to communicate with multiple EEPROMs | [USART driver asynchronous - UART echo](/core_apps_sam_l10_l11/apps/driver/usart/async/usart_echo/readme.html) | This example echoes the received characters over the console using the USART driver in asynchronous mode | [FAT filesystem using NVM Media](/core_apps_sam_l10_l11/apps/fs/nvm_fat/readme.html) | This application shows an example of implementing a FAT disk in the device internal Flash memory | [FreeRTOS basic](/core_apps_sam_l10_l11/apps/rtos/freertos/basic_freertos/readme.html) | This example application blinks an LED to show the FreeRTOS threads that are running and to indicate status | [TrustZone FreeRTOS basic](/core_apps_sam_l10_l11/apps/rtos/freertos/basic_freertos_trustZone/readme.html) | This example application blinks an LED to show the FreeRTOS threads that are running in non-secure mode and to indicate status | [Title](/core_apps_sam_l10_l11/apps/rtos/freertos/basic_freertos_trustZone/NonSecure/readme.html) | short_description | [Title](/core_apps_sam_l10_l11/apps/rtos/freertos/basic_freertos_trustZone/Secure/readme.html) | short_description | [Console Debug System Service using UART](/core_apps_sam_l10_l11/apps/system/console_debug/sys_console_debug_uart_read_write/readme.html) | This example application demonstrates the UART based console and debug system service | [Time System Service multi-client](/core_apps_sam_l10_l11/apps/system/time/sys_time_multiclient/readme.html) | This example application demonstrates the multi-client system timer functionality | ____ [![License](https://img.shields.io/badge/license-Harmony%20license-orange.svg)](https://github.com/Microchip-MPLAB-Harmony/core_apps_sam_l10_l11/blob/master/mplab_harmony_license.md) [![Latest release](https://img.shields.io/github/release/Microchip-MPLAB-Harmony/core_apps_sam_l10_l11.svg)](https://github.com/Microchip-MPLAB-Harmony/core_apps_sam_l10_l11/releases/latest) [![Latest release date](https://img.shields.io/github/release-date/Microchip-MPLAB-Harmony/core_apps_sam_l10_l11.svg)](https://github.com/Microchip-MPLAB-Harmony/core_apps_sam_l10_l11/releases/latest) [![Commit activity](https://img.shields.io/github/commit-activity/y/Microchip-MPLAB-Harmony/core_apps_sam_l10_l11.svg)](https://github.com/Microchip-MPLAB-Harmony/core_apps_sam_l10_l11/graphs/commit-activity) [![Contributors](https://img.shields.io/github/contributors-anon/Microchip-MPLAB-Harmony/core_apps_sam_l10_l11.svg)]() ____ [![Follow us on Youtube](https://img.shields.io/badge/Youtube-Follow%20us%20on%20Youtube-red.svg)](https://www.youtube.com/user/MicrochipTechnology) [![Follow us on LinkedIn](https://img.shields.io/badge/LinkedIn-Follow%20us%20on%20LinkedIn-blue.svg)](https://www.linkedin.com/company/microchip-technology) [![Follow us on Facebook](https://img.shields.io/badge/Facebook-Follow%20us%20on%20Facebook-blue.svg)](https://www.facebook.com/microchiptechnology/) [![Follow us on Twitter](https://img.shields.io/twitter/follow/MicrochipTech.svg?style=social)](https://twitter.com/MicrochipTech) [![](https://img.shields.io/github/stars/Microchip-MPLAB-Harmony/core_apps_sam_l10_l11.svg?style=social)]() [![](https://img.shields.io/github/watchers/Microchip-MPLAB-Harmony/core_apps_sam_l10_l11.svg?style=social)]() ",
+    "content": "[![MCHP](https://www.microchip.com/ResourcePackages/Microchip/assets/dist/images/logo.png)](https://www.microchip.com) # Harmony 3 driver and system service application examples for SAM L10/L11 family MPLAB® Harmony 3 is an extension of the MPLAB® ecosystem for creating embedded firmware solutions for Microchip 32-bit SAM and PIC® microcontroller and microprocessor devices. Refer to the following links for more information. - [Microchip 32-bit MCUs](https://www.microchip.com/design-centers/32-bit) - [Microchip 32-bit MPUs](https://www.microchip.com/design-centers/32-bit-mpus) - [Microchip MPLAB X IDE](https://www.microchip.com/mplab/mplab-x-ide) - [Microchip MPLAB® Harmony](https://www.microchip.com/mplab/mplab-harmony) - [Microchip MPLAB® Harmony Pages](https://microchip-mplab-harmony.github.io/) This repository contains the MPLAB® Harmony 3 driver and system service application examples for SAM L10/L11 family - [Release Notes](/core_apps_sam_l10_l11/release_notes.html) - [MPLAB® Harmony License](/core_apps_sam_l10_l11/mplab_harmony_license.html) To clone or download these applications from Github, go to the [main page of this repository](https://github.com/Microchip-MPLAB-Harmony/core_apps_sam_l10_l11) and then click **Clone** button to clone this repository or download as zip file. This content can also be downloaded using content manager by following these [instructions](https://github.com/Microchip-MPLAB-Harmony/contentmanager/wiki). ## Contents Summary | Folder | Description | --- | --- | apps | Contains driver and system service example applications | docs | Contains documentation in html format for offline viewing (to be used only after cloning this repository onto a local machine). Use [github pages](https://microchip-mplab-harmony.github.io/core_apps_sam_l10_l11/) of this repository for viewing it online. | ## Code Examples The following applications are provided to demonstrate the typical or interesting usage models of one or more peripheral libraries. | Name | Description | ---- | ----------- | [I2C driver asynchronous - I2C EEPROM](/core_apps_sam_l10_l11/apps/driver/i2c/async/i2c_eeprom/readme.html) | This example application shows how to use the I2C driver in asynchronous mode to perform operations on the EEPROM | [I2C driver asynchronous - I2C Multi-client](/core_apps_sam_l10_l11/apps/driver/i2c/async/i2c_multi_slave/readme.html) | This example application shows how to use multi-client feature of the I2C driver in asynchronous mode to communicate with temperature sensor and an EEPROM | [SDSPI driver asynchronous - SDSPI Read Write](/core_apps_sam_l10_l11/apps/driver/sdspi/async/sdspi_read_write/readme.html) | This example application shows how to use the SDSPI driver in asynchronous mode to perform non-blocking operations on the SD Card Media | [SPI Driver asynchronous - multi slave ](/core_apps_sam_l10_l11/apps/driver/spi/async/spi_multi_slave/readme.html) | This example demonstrates how to use single instance of the SPI driver in asynchronous mode to communicate with multiple EEPROMs | [USART driver asynchronous - UART echo](/core_apps_sam_l10_l11/apps/driver/usart/async/usart_echo/readme.html) | This example echoes the received characters over the console using the USART driver in asynchronous mode | [FAT filesystem using NVM Media](/core_apps_sam_l10_l11/apps/fs/nvm_fat/readme.html) | This application shows an example of implementing a FAT disk in the device internal Flash memory | [FreeRTOS basic](/core_apps_sam_l10_l11/apps/rtos/freertos/basic_freertos/readme.html) | This example application demonstrates context switching between four tasks of different priorites. Two tasks run periodically while the other two tasks are event driven | [TrustZone FreeRTOS basic](/core_apps_sam_l10_l11/apps/rtos/freertos/basic_freertos_trustZone/readme.html) | This example application blinks an LED to show the FreeRTOS threads that are running in non-secure mode and to indicate status | [Title](/core_apps_sam_l10_l11/apps/rtos/freertos/basic_freertos_trustZone/NonSecure/readme.html) | short_description | [Title](/core_apps_sam_l10_l11/apps/rtos/freertos/basic_freertos_trustZone/Secure/readme.html) | short_description | [Console Debug System Service using UART](/core_apps_sam_l10_l11/apps/system/console_debug/sys_console_debug_uart_read_write/readme.html) | This example application demonstrates the UART based console and debug system service | [Time System Service multi-client](/core_apps_sam_l10_l11/apps/system/time/sys_time_multiclient/readme.html) | This example application demonstrates the multi-client system timer functionality | ____ [![License](https://img.shields.io/badge/license-Harmony%20license-orange.svg)](https://github.com/Microchip-MPLAB-Harmony/core_apps_sam_l10_l11/blob/master/mplab_harmony_license.md) [![Latest release](https://img.shields.io/github/release/Microchip-MPLAB-Harmony/core_apps_sam_l10_l11.svg)](https://github.com/Microchip-MPLAB-Harmony/core_apps_sam_l10_l11/releases/latest) [![Latest release date](https://img.shields.io/github/release-date/Microchip-MPLAB-Harmony/core_apps_sam_l10_l11.svg)](https://github.com/Microchip-MPLAB-Harmony/core_apps_sam_l10_l11/releases/latest) [![Commit activity](https://img.shields.io/github/commit-activity/y/Microchip-MPLAB-Harmony/core_apps_sam_l10_l11.svg)](https://github.com/Microchip-MPLAB-Harmony/core_apps_sam_l10_l11/graphs/commit-activity) [![Contributors](https://img.shields.io/github/contributors-anon/Microchip-MPLAB-Harmony/core_apps_sam_l10_l11.svg)]() ____ [![Follow us on Youtube](https://img.shields.io/badge/Youtube-Follow%20us%20on%20Youtube-red.svg)](https://www.youtube.com/user/MicrochipTechnology) [![Follow us on LinkedIn](https://img.shields.io/badge/LinkedIn-Follow%20us%20on%20LinkedIn-blue.svg)](https://www.linkedin.com/company/microchip-technology) [![Follow us on Facebook](https://img.shields.io/badge/Facebook-Follow%20us%20on%20Facebook-blue.svg)](https://www.facebook.com/microchiptechnology/) [![Follow us on Twitter](https://img.shields.io/twitter/follow/MicrochipTech.svg?style=social)](https://twitter.com/MicrochipTech) [![](https://img.shields.io/github/stars/Microchip-MPLAB-Harmony/core_apps_sam_l10_l11.svg?style=social)]() [![](https://img.shields.io/github/watchers/Microchip-MPLAB-Harmony/core_apps_sam_l10_l11.svg?style=social)]() ",
     "url": "http://localhost:4000/core_apps_sam_l10_l11/",
     "relUrl": "/"
   }
