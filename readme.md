@@ -43,7 +43,7 @@ The following applications are provided to demonstrate the typical or interestin
 | [SPI Driver asynchronous - multi slave ](apps/driver/spi/async/spi_multi_slave/readme.md) | This example demonstrates how to use single instance of the SPI driver in asynchronous mode to communicate with multiple EEPROMs |
 | [USART driver asynchronous - UART echo](apps/driver/usart/async/usart_echo/readme.md) | This example echoes the received characters over the console using the USART driver in asynchronous mode |
 | [FAT filesystem using NVM Media](apps/fs/nvm_fat/readme.md) | This application shows an example of implementing a FAT disk in the device internal Flash memory |
-| [FreeRTOS basic](apps/rtos/freertos/basic_freertos/readme.md) | This example application blinks an LED to show the FreeRTOS threads that are running and to indicate status |
+| [FreeRTOS basic](apps/rtos/freertos/basic_freertos/readme.md) | This example application demonstrates context switching between four tasks of different priorites. Two tasks run periodically while the other two tasks are event driven |
 | [TrustZone FreeRTOS basic](apps/rtos/freertos/basic_freertos_trustZone/readme.md) | This example application blinks an LED to show the FreeRTOS threads that are running in non-secure mode and to indicate status |
 | [Title](apps/rtos/freertos/basic_freertos_trustZone/NonSecure/readme.md) | short_description |
 | [Title](apps/rtos/freertos/basic_freertos_trustZone/Secure/readme.md) | short_description |
