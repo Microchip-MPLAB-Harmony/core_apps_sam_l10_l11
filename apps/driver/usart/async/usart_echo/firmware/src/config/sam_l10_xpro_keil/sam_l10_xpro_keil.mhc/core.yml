@@ -110,14 +110,14 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: drv_usart_0, value: 'false'}
+        attributes: {id: core, value: 'false'}
   - type: Boolean
     attributes: {id: DMA_CH_NEEDED_FOR_SERCOM0_Transmit}
     children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: drv_usart_0, value: 'false'}
+        attributes: {id: core, value: 'false'}
   - type: Integer
     attributes: {id: DPLL96M_CLOCK_FREQ}
     children:
@@ -546,6 +546,34 @@ children:
       children:
       - type: Dynamic
         attributes: {id: core, value: '0x0'}
+  - type: Boolean
+    attributes: {id: PORT_GROUP_0_PIN_24_USED}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: 'true'}
+  - type: Boolean
+    attributes: {id: PORT_GROUP_0_PIN_25_USED}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: 'true'}
+  - type: Boolean
+    attributes: {id: PORT_GROUP_0_PIN_27_USED}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: 'true'}
+  - type: Boolean
+    attributes: {id: PORT_GROUP_0_PIN_7_USED}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: 'true'}
   - type: String
     attributes: {id: PORT_GROUP_0_PMUX12}
     children:
