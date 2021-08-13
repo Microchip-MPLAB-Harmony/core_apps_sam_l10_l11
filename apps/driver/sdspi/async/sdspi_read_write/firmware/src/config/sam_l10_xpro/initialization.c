@@ -96,7 +96,7 @@ const DRV_SDSPI_PLIB_INTERFACE drvSDSPI0PlibAPI = {
     .read = (DRV_SDSPI_PLIB_READ)SERCOM0_SPI_Read,
 
     /* SPI PLIB Transfer Status function */
-    .isBusy = (DRV_SDSPI_PLIB_IS_BUSY)SERCOM0_SPI_IsBusy,
+    .isTransmitterBusy = (DRV_SPI_PLIB_TRANSMITTER_IS_BUSY)SERCOM0_SPI_IsTransmitterBusy,
 
     .transferSetup = (DRV_SDSPI_PLIB_SETUP)SERCOM0_SPI_TransferSetup,
 
@@ -143,11 +143,6 @@ const DRV_SDSPI_INIT drvSDSPI0InitData =
 
     .isFsEnabled            = false,
 
-    /* DMA Channel for Transmit */
-    .txDMAChannel           = SYS_DMA_CHANNEL_NONE,
-
-    /* DMA Channel for Receive */
-    .rxDMAChannel           = SYS_DMA_CHANNEL_NONE,
 };
 
 // </editor-fold>
