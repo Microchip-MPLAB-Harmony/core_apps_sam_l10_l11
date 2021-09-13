@@ -41,7 +41,7 @@ Following table provides number of peripheral library examples available for dif
 
 Following table provides number of peripheral library examples available for different development kits.
 
-| Development Kits  | MPLABx applications | KEIL applications |
+| Development Kits  | MPLAB X applications | KEIL applications |
 |:-----------------:|:-------------------:|:----------------:|
 | [SAML10 Xplained Pro Evaluation Kit](https://www.microchip.com/DevelopmentTools/ProductDetails/dm320204) | 9 | 1 |
 | [SAML11 Xplained Pro Evaluation Kit](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320205) | 2 | 0 |
@@ -83,7 +83,7 @@ Following table provides number of peripheral library examples available for dif
 
 Following table provides number of peripheral library examples available for different development kits.
 
-| Development Kits  | MPLABx applications | KEIL applications |
+| Development Kits  | MPLAB X applications | KEIL applications |
 |:-----------------:|:-------------------:|:----------------:|
 | [SAML11 Xplained Pro Evaluation Kit](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320205) | 2 | 0 |
 | [SAML10 Xplained Pro Evaluation Kit](https://www.microchip.com/DevelopmentTools/ProductDetails/dm320204) | 9 | 1 |
