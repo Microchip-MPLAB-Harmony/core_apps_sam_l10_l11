@@ -66,6 +66,11 @@
 #pragma config WDT_EWOFFSET = 0xB
 #pragma config WDT_WEN = CLEAR
 #pragma config BOD33_HYST = CLEAR
+#pragma config IDAU_BOOTPROT = 0x0
+#pragma config BOOTROM_CRCKEY_0 = 0xffffffff
+#pragma config BOOTROM_CRCKEY_1 = 0xffffffff
+#pragma config BOOTROM_CRCKEY_2 = 0xffffffff
+#pragma config BOOTROM_CRCKEY_3 = 0xffffffff
 
 
 
@@ -99,7 +104,7 @@ const DRV_SPI_PLIB_INTERFACE drvSPI0PlibAPI = {
     .callbackRegister = (DRV_SPI_PLIB_CALLBACK_REGISTER)SERCOM0_SPI_CallbackRegister,
 };
 
-const uint32_t drvSPI0remapDataBits[]= { 0x0, 0x1, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF };
+const uint32_t drvSPI0remapDataBits[]= { 0x0, 0x1, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF };
 const uint32_t drvSPI0remapClockPolarity[] = { 0x0, 0x20000000 };
 const uint32_t drvSPI0remapClockPhase[] = { 0x10000000, 0x0 };
 
@@ -203,9 +208,9 @@ void SYS_Initialize ( void* data )
 
     NVMCTRL_Initialize();
 
-    EVSYS_Initialize();
-
     SERCOM0_SPI_Initialize();
+
+    EVSYS_Initialize();
 
 	BSP_Initialize();
 
