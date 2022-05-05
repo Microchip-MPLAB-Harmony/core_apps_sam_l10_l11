@@ -146,7 +146,7 @@ void TASK4_Initialize ( void )
 void TASK4_Tasks ( void )
 {
     bool status = false;
-    TickType_t timeNow;   
+    TickType_t timeNow;    
 
     switchPressSemaphore = xSemaphoreCreateBinary();
 
