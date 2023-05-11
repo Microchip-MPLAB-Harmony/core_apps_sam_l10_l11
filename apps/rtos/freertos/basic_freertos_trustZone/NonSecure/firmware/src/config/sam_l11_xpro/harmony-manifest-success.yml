@@ -4,7 +4,7 @@
 
 
 project: NonSecure
-creation_date: 2022-05-10T09:11:38.802+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
+creation_date: 2023-05-11T17:32:21.464+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
 operating_system: Windows 10
 mhc_mode: Standalone            # [IDE|Standalone|Headless]
 mhc_version: v3.8.5
@@ -14,8 +14,8 @@ compiler: xc32
 
 modules:
     - {name: "csp", version: "unknown"}
-    - {name: "core", version: "v3.11.0-rc.1"}
+    - {name: "core", version: "unknown"}
     - {name: "dev_packs", version: "unknown"}
-    - {name: "bsp", version: "v3.13.0-rc.1"}
-    - {name: "CMSIS-FreeRTOS", version: "unknown"}
+    - {name: "bsp", version: "v3.16.0-rc.1"}
+    - {name: "CMSIS-FreeRTOS", version: "v10.5.1"}
 

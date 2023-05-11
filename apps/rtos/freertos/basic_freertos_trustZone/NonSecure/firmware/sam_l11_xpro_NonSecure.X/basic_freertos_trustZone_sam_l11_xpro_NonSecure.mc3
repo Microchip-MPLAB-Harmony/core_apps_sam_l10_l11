@@ -1,4 +1,4 @@
-<config configName="sam_l11_xpro" projectName="basic_freertos_trustZone_sam_l11_xpro_NonSecure" configVersion="1.1" device="ATSAML11E16A" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.4.2">
+<config configName="sam_l11_xpro" projectName="basic_freertos_trustZone_sam_l11_xpro_NonSecure" configVersion="1.1" device="ATSAML11E16A" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.5.0">
    <usedPackages class="java.util.ArrayList"/>
    <usedClasses class="java.util.TreeMap">
       <entry>
@@ -440,7 +440,8 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="!@#harmonyUserData"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;UserData&gt;
   &lt;UserData dnOrder=&quot;0&quot;&gt;
-    &lt;ComponentGraph dnOrder=&quot;0&quot; id=&quot;__ROOTVIEW&quot;&gt;
+    &lt;GraphSettings canvasHeight=&quot;400&quot; canvasWidth=&quot;400&quot; dnOrder=&quot;0&quot;/&gt;
+    &lt;ComponentGraph dnOrder=&quot;1&quot; id=&quot;__ROOTVIEW&quot;&gt;
       &lt;ElementPositions dnOrder=&quot;0&quot;&gt;
         &lt;ElementPosition dnOrder=&quot;0&quot; id=&quot;BSP_SAM_L11_Xplained_Pro&quot; x=&quot;30&quot; y=&quot;200&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;1&quot; id=&quot;FreeRTOS&quot; x=&quot;170&quot; y=&quot;120&quot;/&gt;
@@ -453,7 +454,6 @@
         &lt;ElementPosition dnOrder=&quot;8&quot; id=&quot;pm&quot; x=&quot;330&quot; y=&quot;60&quot;/&gt;
       &lt;/ElementPositions&gt;
     &lt;/ComponentGraph&gt;
-    &lt;GraphSettings canvasHeight=&quot;400&quot; canvasWidth=&quot;400&quot; dnOrder=&quot;1&quot;/&gt;
   &lt;/UserData&gt;
 &lt;/UserData&gt;
 </value>
@@ -1594,39 +1594,39 @@
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\ATSAML11E16A_DFP\instance\oscctrl.h</file>
-         <hash>fe4c9b043b7015c6bd73a9008d3b77b73c00cce0669813b79a121fd8ce3e5639</hash>
+         <hash>344b0c4a4196a84459723130c625cd8b51de15b9148803f4c27b4de43f1e00a7</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\packs\ATSAML11E16A_DFP\instance\supc.h</file>
-         <hash>79298d9e57f54486dc8560fff0f5d23d15f63ccd174d65aeb88adb282131d48e</hash>
+         <hash>5b070a38b582f25b88a324b3f34723a6f52cf33540ac2262c7cc7bc85196d7f8</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\third_party\rtos\FreeRTOS\Source\stream_buffer.c</file>
-         <hash>a62731cd211dd9caf70958b229d4a3a607ef12e6fbfec573a0d089f21c45f34f</hash>
+         <hash>0ec303ba296caca5de955dc470bcadd134fb15b192ddf61c9afc92070bc1039a</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\ATSAML11E16A_DFP\component\freqm.h</file>
-         <hash>9778f545b40bf75564cdd0e20d479d9f04f51a2c1a6eeec2250647732aa648d9</hash>
+         <hash>0ebf234760ae9918955a66d28e966c5fbfa975703dbfd048763fb0a80845fdd3</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\packs\ATSAML11E16A_DFP\instance\rtc.h</file>
-         <hash>9a52dfb21fbaebcc5e77c7f030515d7905ec3f7b3530625f955b83c50307affa</hash>
+         <hash>c855e60f7641b58cf0911f7bae3156c940723ee7e40655b25cd652b1721ff412</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\ATSAML11E16A_DFP\instance\sercom0.h</file>
-         <hash>ff9b08b5f93ea26334a1cd0e579ce3312745ff1509b6e824f99f352fc6a24864</hash>
+         <hash>f6f3c6e2a9c792705cab4c90372416ad4154742b137c2af9f699fb1d696719a6</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\config\sam_l11_xpro\peripheral\port\plib_port.c</file>
-         <hash>74a6d5f8f2690756fd1e5c6ddcf8ae69da1882f5354cf3e6770f58d1630e1bc3</hash>
+         <hash>569afe18f22ee4c263798022b554a7e52c0cd6218f2afff03f150504e1102543</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\config\sam_l11_xpro\exceptions.c</file>
-         <hash>cc07b84902bf881b410bee8cd4463b438ad2997c8fd8d3f308a16d926f75d601</hash>
+         <hash>3d788ce1bd25caaaf6b533ec5b06e4b1e753044c1a217dd5cdf8629628ae85a9</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\packs\ATSAML11E16A_DFP\component\ac.h</file>
-         <hash>68bd09259af83e2c74738c98fa329136a054bdd6316ff47f83ff469fd776741a</hash>
+         <hash>9aece10a2cc9dfeaf43d5e04cf68896ec8aac3c591623a2d66c16ced6ffe08f4</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\CMSIS\CMSIS\Core\Include\cmsis_armcc.h</file>
@@ -1634,19 +1634,19 @@
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\ATSAML11E16A_DFP\component\dmac.h</file>
-         <hash>11423f974b2db73d249c021c54c31d2982c94bbd4e24929a293535e0efaf4151</hash>
+         <hash>21a1a274f53ae5985c8f02bbbf704e66826127f5e1b620402376259b4ef8ce7b</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\third_party\rtos\FreeRTOS\Source\include\stack_macros.h</file>
-         <hash>06b5b66a9b98ad4998c82d353c0108b9db1a846951b8865cbdeeef90c5bbe2fe</hash>
+         <hash>3cddf2b3d47ae387e376ac75eb468f9d8ffb575d68c143e08d54af4087474cce</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\packs\ATSAML11E16A_DFP\instance\sercom0.h</file>
-         <hash>ff9b08b5f93ea26334a1cd0e579ce3312745ff1509b6e824f99f352fc6a24864</hash>
+         <hash>f6f3c6e2a9c792705cab4c90372416ad4154742b137c2af9f699fb1d696719a6</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\config\sam_l11_xpro\initialization.c</file>
-         <hash>b49e6dc8635ed9ebd597882cda54553e9e321e5220049819ad907c04caa8b490</hash>
+         <hash>bebd6fa79e001491f8016295aa7cd3a4502b5c1e2df8da0df68be480bfa9a8b8</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\config\sam_l11_xpro\libc_syscalls.c</file>
@@ -1654,7 +1654,7 @@
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\ATSAML11E16A_DFP\instance\dac.h</file>
-         <hash>99c7c3e96caaad1459fbbba66614fa6d33f4de434a16e6012c04a2ee1d789ba0</hash>
+         <hash>0482c793e0c6b3ffc1e29301c9b155e7eed0b6638a46bf3277cc74c801f90091</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\packs\CMSIS\CMSIS\Core\Include\cmsis_compiler.h</file>
@@ -1662,11 +1662,11 @@
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\packs\ATSAML11E16A_DFP\instance\oscctrl.h</file>
-         <hash>fe4c9b043b7015c6bd73a9008d3b77b73c00cce0669813b79a121fd8ce3e5639</hash>
+         <hash>344b0c4a4196a84459723130c625cd8b51de15b9148803f4c27b4de43f1e00a7</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\packs\ATSAML11E16A_DFP\instance\nvmctrl.h</file>
-         <hash>a51e6b60d8f4c48ee375892075d50ffbc53cf69167744ea269fa434bc3b3c5b4</hash>
+         <hash>f0cc4a165a3025781dbadedd4995a4bc7dab49c0b2e321c6c8ae6709872b3e8e</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\packs\CMSIS\CMSIS\Core\Include\mpu_armv8.h</file>
@@ -1674,23 +1674,23 @@
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\third_party\rtos\FreeRTOS\Source\timers.c</file>
-         <hash>dae8ab1093eed0eebd86eef7f4e777e3d249d98b75528ff3841d41ce1c8f3fa6</hash>
+         <hash>24962ef361f396aaa5e6e33776eeeddaf2fb251c87b6fe50602acc56c537b093</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\config\sam_l11_xpro\definitions.h</file>
-         <hash>469147300b77692253a183d5e5e1b62b648d6a70da76780d839063390071ac83</hash>
+         <hash>7ee42b649481414a07a2fb81975eefe56c5163c7390500957f3b33d1e965403b</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\packs\ATSAML11E16A_DFP\instance\ccl.h</file>
-         <hash>1dfd559aaec2b84c89edaf216267cd697e404c09fb767838c319134569f6ff4e</hash>
+         <hash>778b5e23549bd50ef37c035fb236aeebc0f6ac90d18483201ab755e034ac943a</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\config\sam_l11_xpro\osal\osal.h</file>
-         <hash>d42702188d00d3e1d7219d7eef030485896bf8b5ebe55318656e82f0fbb89788</hash>
+         <hash>8404fbe44807fa0484ffb38843a72cb9af8e31c9c30bd1b2594e609b8ea317d9</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\ATSAML11E16A_DFP\instance\idau.h</file>
-         <hash>0d02f6dff7c10226d00d5af3b7c5f853dd4d427a36b71a769cf7cb4db2524e73</hash>
+         <hash>5541d2ba7cc619251f1f5c1890e72616f1cb706dd4009b9731d9dc90f0e80ba3</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\packs\CMSIS\CMSIS\Core\Include\core_cm23.h</file>
@@ -1702,47 +1702,51 @@
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\ATSAML11E16A_DFP\instance\supc.h</file>
-         <hash>79298d9e57f54486dc8560fff0f5d23d15f63ccd174d65aeb88adb282131d48e</hash>
+         <hash>5b070a38b582f25b88a324b3f34723a6f52cf33540ac2262c7cc7bc85196d7f8</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\CMSIS\CMSIS\Core\Include\mpu_armv8.h</file>
          <hash>467a5ce9d65d9b37fc32e01001ed184500d56576f303713d27b76e68dd67911c</hash>
       </entry>
       <entry>
+         <file>..\..\..\NonSecure\firmware\src\config\sam_l11_xpro\pin_configurations.csv</file>
+         <hash>8ebc66123081856cdaaf9b76101ba2bd889c9cc7b1574a1b4127187fc00c3f3f</hash>
+      </entry>
+      <entry>
          <file>..\..\..\NonSecure\firmware\src\third_party\rtos\FreeRTOS\Source\include\event_groups.h</file>
-         <hash>a73c0b319370116d5981d5dacbabad3a775f85ae540ef70b4ced1c99c9ac6cd5</hash>
+         <hash>7b3dd12a50d649c124c1af8be742671b9965b6f924310bda7984fe1b65c7f54a</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\third_party\rtos\FreeRTOS\Source\include\stream_buffer.h</file>
-         <hash>43bd2a4bf5d6495e04c8409187d8f31dfaee58d8f94d7e3a4fd9830e5d7e68dc</hash>
+         <hash>b876d839460197d94d0f95fb93c6aeb457f6fc572d32258480fed7d4de686b6b</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\ATSAML11E16A_DFP\component\dac.h</file>
-         <hash>4bf337a72a19b3f7167436135f626196a6526e0d4687beaf2ff349184a5c7f54</hash>
+         <hash>6cf6b2052a85b134979f763a81438d1674682c262ca976ac7b02df5b78a039d2</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\packs\ATSAML11E16A_DFP\component\rtc.h</file>
-         <hash>108fb84b1726faea5f27c7c3a05d09bd2df0f2b5e1e29d90787f11cdde2f62d8</hash>
+         <hash>207ecb532c7bfa256395daebb99b9451b604da434bcf50ed70e359ceca04afe7</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\config\sam_l11_xpro\FreeRTOSConfig.h</file>
-         <hash>8045337e36828ad0972f0a606088a78b90e3c730e7396adb06c06cdff8125d1c</hash>
+         <hash>92ae22e35d3edaa48ee3fe2281fb057c0aff527f4861ba5a2882a0fe665db415</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\config\sam_l11_xpro\bsp\bsp.h</file>
-         <hash>e57514c6e9be866476888eb402e8edcebedf34471caa0f6fdf8b6428ac2ed5cc</hash>
+         <hash>43abda1b75cc9cfb158aa3e577cb93156ca8cb23c1e857bd8c0dbfee957c9b92</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\ATSAML11E16A_DFP\instance\sercom1.h</file>
-         <hash>4e4645b9b956fb2c4aeae41eb1b548a8debd1259f42ea848dc24d627214385f8</hash>
-      </entry>
-      <entry>
-         <file>..\..\..\Secure\firmware\src\packs\ATSAML11E16A_DFP\component\sercom.h</file>
-         <hash>07cdf314eb764493cc53e45381c1a6ba18f560928f783dd481c15bb72cd5e0fd</hash>
+         <hash>1ba2397be498e08a485613d13cac5e88e2771e94dc6bf5f6c62ec53877f51b64</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\config\sam_l11_xpro\peripheral\pm\plib_pm.c</file>
          <hash>298850e9d54d237f93b16abca226d64f1db961004ab900ba052fb3cba31af461</hash>
+      </entry>
+      <entry>
+         <file>..\..\..\Secure\firmware\src\packs\ATSAML11E16A_DFP\component\sercom.h</file>
+         <hash>d28ed0dbc55c0e510433926fda7372744bff3bb5177ae3787d2d1d95e5955a5c</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\config\sam_l11_xpro\bsp\bsp.c</file>
@@ -1758,27 +1762,27 @@
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\third_party\rtos\FreeRTOS\Source\include\croutine.h</file>
-         <hash>b6da8ad0cb09303c87eb634679b97f56001c14f45acd1378103504699a95cad4</hash>
+         <hash>cf52c15fa26a8d4f82b55909b75ebfe2aab25468ba7780748912ddead9812b4e</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\packs\ATSAML11E16A_DFP\component\fuses.h</file>
-         <hash>d508a41a940a5a77482dc14e16015edeba9cff2ec4357b2b5bbee41bef6c32b4</hash>
+         <hash>a442f0d9aec056cc3280d09317c0f2b94708239e9f36bb29978c8e7a46f895e1</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\packs\ATSAML11E16A_DFP\component\pac.h</file>
-         <hash>a96be7a0fc0cddf3a09f8b3df1ca9b5dddeaee88239fa32bd683f23a4094ce59</hash>
+         <hash>268a7c6fdf885406ce4e8eb9395fd6791a35707c4c8873c1f1d5b53ab37b442d</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\packs\ATSAML11E16A_DFP\instance\pac.h</file>
-         <hash>c711e6e8cdf86a40ef0fe3e647d6213c5bffdc7f3187f9769c8ef148f417a1e1</hash>
+         <hash>401204d2301b3138855f4d82c1bea3aeb585698f0e54da3340d004531368d619</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\ATSAML11E16A_DFP\instance\tc2.h</file>
-         <hash>ff53a5468e9b03c4c1eaf3c4f4ec8cd65a04c7c64fc875415609bdde3ab996d0</hash>
+         <hash>3443cdb9a10b995b749918a89b3d78bcb1ce7e4a3197793963679f59955c726c</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\packs\ATSAML11E16A_DFP\instance\freqm.h</file>
-         <hash>0db79cb3ce344c1e72e559c4c8440ac153c75d8c693e6964d61a7e6512207e2a</hash>
+         <hash>bdf512bd0245758700f08540f69b768adca3beebffff0ac8e2f04ed7c2306275</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\config\sam_l11_xpro\device_cache.h</file>
@@ -1786,7 +1790,7 @@
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\packs\ATSAML11E16A_DFP\component\osc32kctrl.h</file>
-         <hash>7ec4ced49e4d5d511d313fb6aa70a377b97d2a93a9aa502a5a02e5d440614d88</hash>
+         <hash>4cadfd4a50cd182776851f5d65031ac0f503f279b4595be0aa68f4858ba47047</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\trustZone\nonsecure_entry.h</file>
@@ -1794,31 +1798,31 @@
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\packs\ATSAML11E16A_DFP\component\gclk.h</file>
-         <hash>43cd7acaad9842f5ad45f5bb3ef0243efb15ecfbe4033dd6d819222473abb64b</hash>
+         <hash>637157ba806b68b19bc2a70f5bc014fec842a0a68231c20570d4c6e30d8b64f3</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\ATSAML11E16A_DFP\component\port.h</file>
-         <hash>c4fef6e40d5b84c9453cb733a9c4159d3f81c602801d9209ec260a69f9db5add</hash>
+         <hash>ed63eb744b51945704256e4e185fc12fa1829dce123644479f4dca78c0179699</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\packs\ATSAML11E16A_DFP\saml11e16a.h</file>
-         <hash>ff50e84f28ee99849f0c04690c7cdd5c22a1655d1c7019040838201b3e54ba9d</hash>
+         <hash>7f2c632d17cc935471ef0a08333b6b7ba50152b39d66fb7e9cef8ff274e19a98</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\third_party\rtos\FreeRTOS\Source\portable\GCC\ARM_CM23\secure\secure_port_macros.h</file>
-         <hash>25d01ff80c814393e8aca94a3b8de01ce6a152220828e708fb10d8cefe33bd0c</hash>
+         <hash>bbf060910331b1f92cec8d8915d1d7a007ae077264e3ad860be6b3105180f2ff</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\packs\ATSAML11E16A_DFP\component\freqm.h</file>
-         <hash>9778f545b40bf75564cdd0e20d479d9f04f51a2c1a6eeec2250647732aa648d9</hash>
+         <hash>0ebf234760ae9918955a66d28e966c5fbfa975703dbfd048763fb0a80845fdd3</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\ATSAML11E16A_DFP\instance\pac.h</file>
-         <hash>c711e6e8cdf86a40ef0fe3e647d6213c5bffdc7f3187f9769c8ef148f417a1e1</hash>
+         <hash>401204d2301b3138855f4d82c1bea3aeb585698f0e54da3340d004531368d619</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\ATSAML11E16A_DFP\component\oscctrl.h</file>
-         <hash>9500e20fc03fa69ddc0c3bd966062301fd9fae104ee77c9e5c83335c37927f87</hash>
+         <hash>2e199b0e5b868d04303365ccfa2ad281dd1c1d65e7622f80a32d267339918c91</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\config\sam_l11_xpro\device.h</file>
@@ -1826,75 +1830,75 @@
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\packs\ATSAML11E16A_DFP\instance\adc.h</file>
-         <hash>edb49e468c255eb4c19a42ddd00a3022fac94108b0d888a8f0286e612b8b8308</hash>
+         <hash>31e83ca565418f61c8be408005fd87be0203051ed6f284aa57f3939499b59ae7</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\third_party\rtos\FreeRTOS\Source\include\queue.h</file>
-         <hash>ff7a2139380ad0e2695bbc0d068db7a3b7e54ec41387b4c77acbe1aaa2921b7c</hash>
+         <hash>1b61c1669091e59798a34c32c0f1e234d3f6a645f47641753eceeb7e1d9ce628</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\ATSAML11E16A_DFP\saml11e16a.h</file>
-         <hash>ff50e84f28ee99849f0c04690c7cdd5c22a1655d1c7019040838201b3e54ba9d</hash>
+         <hash>7f2c632d17cc935471ef0a08333b6b7ba50152b39d66fb7e9cef8ff274e19a98</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\packs\ATSAML11E16A_DFP\instance\gclk.h</file>
-         <hash>cb9d2854904e45b54dbf67fb9aac605c9f427d2c46804a3385613cca484fb903</hash>
+         <hash>b300a7c32c5332e095f84e2e04af05b2ee105818c35cebe2ee4864049bbcda9e</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\ATSAML11E16A_DFP\component\trng.h</file>
-         <hash>059c01f68ef768d522c104faaa883523cf1099992e9e3a6dd99c752a497480b8</hash>
+         <hash>270a37b8cacdb96537ab10a1b713138b0c1698705803b962011256aa9d360313</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\ATSAML11E16A_DFP\instance\sercom2.h</file>
-         <hash>c342f1229271ded92d05b0b8bb7d4b15bc808ddcf6396f43820c7147f28f8be9</hash>
+         <hash>e21e9da02c1fde2f719f1cbf5dae226032d4eb8f000e68c5d31c87fa7c8ee3bc</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\packs\ATSAML11E16A_DFP\component\evsys.h</file>
-         <hash>178d5da9e9391ad2a83d78f6fc238d8277b923fcb963785409277efd521fbd81</hash>
+         <hash>58a8abb509f9db3e9f56e2908a9077ce8b4fe033323051305d190052e2ea8bf8</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\config\sam_l11_xpro\toolchain_specifics.h</file>
-         <hash>c93f9d68b1623668727be21b4449250a7e4a5d7040776d6f6d604a7528ffc9eb</hash>
+         <hash>a4f1774c6f1f8c6cd522567536c9e9d75ca63259b868015ac9b0fb0aeeffe1f4</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\ATSAML11E16A_DFP\instance\rstc.h</file>
-         <hash>edd2fac13b7f1e59b39a09f5a468016a5698a04bd92c8225cb5434cb63bd41e0</hash>
+         <hash>f937fa2a13824e98b2e14b7420d910026dbaf464f3e8a9fca92024c35082748a</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\config\sam_l11_xpro\osal\osal_definitions.h</file>
-         <hash>6dc49e317b4557c5516a172c1437125874abd98ffcc7260e3422966078dcef7f</hash>
+         <hash>af2f2336fac0fd5b49fb2d1c8f81baa4f554101b06f130aaa608cd9685c4ac35</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\ATSAML11E16A_DFP\instance\fuses.h</file>
-         <hash>911fe0d525d68af37d5266029bfb9a32bccdf9801ead89a820ee053157368ef1</hash>
-      </entry>
-      <entry>
-         <file>..\..\..\NonSecure\firmware\src\third_party\rtos\FreeRTOS\Source\include\portable.h</file>
-         <hash>c95eb0d549ff1c20edebfec41d73584b5a20d21df20a724084200954b9e8d252</hash>
+         <hash>c268f6f442761a3b5116ef6679d6002d282438c7b647b634cdbedae0ddcdb85e</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\config\sam_l11_xpro\bsp\bsp.h</file>
-         <hash>c0981b89ef5f0317620edce05cc825bea1d792278ce049743b20a17794150336</hash>
+         <hash>b067fbcd68e3ff9faa5fedd8517386e626814ed11c80ef5e6502ca4465079e49</hash>
+      </entry>
+      <entry>
+         <file>..\..\..\NonSecure\firmware\src\third_party\rtos\FreeRTOS\Source\include\portable.h</file>
+         <hash>7ade8f368002778c723b3c4e14084910b7225cd36363ed0c948e9ea36c6f251f</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\ATSAML11E16A_DFP\component\ptc.h</file>
-         <hash>ed8c98455506ba7b29e9cdf6f158402f87b6ebeaf8b69531273a288ed58d3525</hash>
+         <hash>617d89472fd226a7cb5806ba3d623d1f497f9b5ac13a987cf16531f65969a72c</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\packs\ATSAML11E16A_DFP\instance\sercom2.h</file>
-         <hash>c342f1229271ded92d05b0b8bb7d4b15bc808ddcf6396f43820c7147f28f8be9</hash>
+         <hash>e21e9da02c1fde2f719f1cbf5dae226032d4eb8f000e68c5d31c87fa7c8ee3bc</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\ATSAML11E16A_DFP\instance\tc1.h</file>
-         <hash>f79a3403d89990462a8b2cd0dd4f17c6191efcbda90a7e5621ae877017d68f9e</hash>
+         <hash>0ab6ce807e8455eaa61d5be6e1195a16583ea66bccb398ecce78342ffad2ce11</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\ATSAML11E16A_DFP\component\rstc.h</file>
-         <hash>8b9e326480c348cf23935a290cc2838ef2a2cd1fc65ad758cb6956d94b3bc62f</hash>
+         <hash>d22eed5f30048c779f20c5b29bc534d21b48d15235d7140b2a5d557e613f88b0</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\ATSAML11E16A_DFP\instance\ac.h</file>
-         <hash>249de4a2a90c1891b637a962dbb204b54ff54b2c7f4a4faf918df9c0cdb18432</hash>
+         <hash>3fd2624b4c5729f6c0d2fc688bdaf31ee8a6b22febf6d61178d7fb73e7a5b77d</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\trustZone\nonsecure_entry.c</file>
@@ -1906,23 +1910,23 @@
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\config\sam_l11_xpro\interrupts.c</file>
-         <hash>55af65da740b0b5e811aab74aa752a3fa5072b4741d836c2424d2856ef93d4a0</hash>
+         <hash>48ac40926593b5ff218492f0efef12921871d3831e79363ce36253cb7a1926f9</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\ATSAML11E16A_DFP\component\supc.h</file>
-         <hash>41504073554a9fcf44ebe435c4306cd394a5b80af2bce75f368e3953555d3ebc</hash>
+         <hash>81b5ef5ea1905feb7f3a1c79cbad71fbe706b52c31eac2157c5bd589db47067e</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\ATSAML11E16A_DFP\instance\eic.h</file>
-         <hash>f0d81a6b2c61b631a118500a9500a7b29fabc32ece34d37c4c30d4fcda1a11a9</hash>
+         <hash>97b3a429965198664c6b17e52ce708afa446c4c64ec38e4f1ab4450f67d766b5</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\packs\ATSAML11E16A_DFP\instance\dac.h</file>
-         <hash>99c7c3e96caaad1459fbbba66614fa6d33f4de434a16e6012c04a2ee1d789ba0</hash>
+         <hash>0482c793e0c6b3ffc1e29301c9b155e7eed0b6638a46bf3277cc74c801f90091</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\packs\ATSAML11E16A_DFP\component\ccl.h</file>
-         <hash>50dffd809df8d84c1cebe4ac9f5c47919fb400a8bd640241556a97d76b664cf8</hash>
+         <hash>ac56870cd660a940adad3150efc31c94c618e6d160bb218f13957b1b1af6d950</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\packs\CMSIS\CMSIS\Core\Include\cachel1_armv7.h</file>
@@ -1930,19 +1934,19 @@
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\third_party\rtos\FreeRTOS\Source\include\task.h</file>
-         <hash>85a11a834d04120402087ac61190566f893480e9d6c8fe903218330dc4ea7d30</hash>
+         <hash>45f2245c914ed25ab26a1ea78ddd4ac74cb6522e1b26ac5c44b614ca4c8cee99</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\ATSAML11E16A_DFP\instance\wdt.h</file>
-         <hash>79ca36de4d8599099bc1ee814c400c9f609779ead6aafa06e60c5ed812a1f801</hash>
+         <hash>1db3e93dc10b5cdcb66e0ca1a07d398fc1dcafbe8c505c5c0cacd0b36b0388da</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\config\sam_l11_xpro\ATSAML11E16A.ld</file>
-         <hash>391b2a0089665b50b003c72b8c8764df1a221d997dea5af89618fe315a3eddd3</hash>
+         <hash>caf7c5c79271652bf3f234cec59bfe35aec7fcfb7faca06c5fd630cd96c96ea7</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\packs\ATSAML11E16A_DFP\component\oscctrl.h</file>
-         <hash>9500e20fc03fa69ddc0c3bd966062301fd9fae104ee77c9e5c83335c37927f87</hash>
+         <hash>2e199b0e5b868d04303365ccfa2ad281dd1c1d65e7622f80a32d267339918c91</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\config\sam_l11_xpro\bsp\bsp.c</file>
@@ -1950,11 +1954,11 @@
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\ATSAML11E16A_DFP\instance\mclk.h</file>
-         <hash>221f5838896daac0ef78d16abd0f15be368ad1eca0284bdf50f71239f6580e24</hash>
+         <hash>b389c2173848cc8cabd889b1a3998ad4d197c6662964d82235c63062e638218a</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\packs\ATSAML11E16A_DFP\instance\pm.h</file>
-         <hash>b613292a7a9c6b955c84013030a7e64553b23a73b22027296bb0bacad2f3dd4a</hash>
+         <hash>4d28d84e006f67ce7c296a64e5c95a465dde93a32ffb5b32dc2bcadac9874d0b</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\CMSIS\CMSIS\Core\Include\tz_context.h</file>
@@ -1962,7 +1966,7 @@
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\config\sam_l11_xpro\osal\osal_freertos.h</file>
-         <hash>ca5e502b9f076c4bdc8d97ac2e4cfdfa5d1b49f7d64222c353fac4dcd794bc7c</hash>
+         <hash>7ad9faa903d8587bab9490660328f134b8e027f9c24bca47201f3f96f3b99474</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\config\sam_l11_xpro\device_cache.h</file>
@@ -1970,71 +1974,71 @@
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\packs\ATSAML11E16A_DFP\instance\idau.h</file>
-         <hash>0d02f6dff7c10226d00d5af3b7c5f853dd4d427a36b71a769cf7cb4db2524e73</hash>
+         <hash>5541d2ba7cc619251f1f5c1890e72616f1cb706dd4009b9731d9dc90f0e80ba3</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\third_party\rtos\FreeRTOS\Source\include\projdefs.h</file>
-         <hash>292c78c91dbf63a6aa028f381b1dd548d549949f4fb9fcfd97f949569e013d76</hash>
+         <hash>8faf4220ded25b00fd72424a2fa4e63e154713ae7b42f7270f1e3289362a6312</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\ATSAML11E16A_DFP\instance\gclk.h</file>
-         <hash>cb9d2854904e45b54dbf67fb9aac605c9f427d2c46804a3385613cca484fb903</hash>
+         <hash>b300a7c32c5332e095f84e2e04af05b2ee105818c35cebe2ee4864049bbcda9e</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\third_party\rtos\FreeRTOS\Source\portable\GCC\ARM_CM23\non_secure\portasm.h</file>
-         <hash>44a9958d91bef57adf9e47d35de0445b7b30b209d34b803b1e89dc3e0a981012</hash>
+         <hash>d5a2bbe33227973f4f5e415cfec4635d3cea655ef64aa84c7516358296772b99</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\config\sam_l11_xpro\osal\osal_freertos.c</file>
-         <hash>6f35cfd335587dd112d0ac648ae99539a5acbb98ba80ce6e8c7c855e7b8d7465</hash>
+         <hash>85201651ffb4dad86674b478746e0dc8cd833f98b39c83efc2ae3639f3efdd3b</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\third_party\rtos\FreeRTOS\Source\portable\GCC\ARM_CM23\non_secure\port.c</file>
-         <hash>a1df21f5ecfe79a380258e020ca8283fa2d2bd09caf437f0428080843bd8f034</hash>
+         <hash>ed5b374f68ec512f04d0b8d0c2589630cb6dd066d8c912ded53d6cdc9d8bcf11</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\ATSAML11E16A_DFP\pio\saml11e16a.h</file>
-         <hash>f937b5d28fe30c087f651e0d01fe3ea8a79a04f30795ea20fb1db99bdcf24ec3</hash>
+         <hash>6ab51641f7f89f2f5c9680e4b5927b219e27dca3af4f68102f58cb99f20579e4</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\ATSAML11E16A_DFP\component\tc.h</file>
-         <hash>9c89bda9e89b7b4befa01505dd933499f8ab48f4046d4e0bacfae8529775b2a8</hash>
+         <hash>454e51fd9e2190abefa76343b1157003a4fffaa9d8912d47104cdac224b56fec</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\third_party\rtos\FreeRTOS\Source\portable\GCC\ARM_CM23\non_secure\portasm.c</file>
-         <hash>b0cd1377782a5451e7344dc641bb1c6b6733bc3604f069f65f745598a7112c6d</hash>
+         <hash>11e9d446fb7b2fc7e828469b533db4ef50675cfaa240352df69ee5bd3e5f9e42</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\ATSAML11E16A_DFP\component\tram.h</file>
-         <hash>02e62b27d38b89e9a873bd66c4e236c64db3ffe48511e465976064e6755390c9</hash>
+         <hash>be7cba340ebc0aa822ba2b90e0c57f3da23f1f9f6dee723d123d8d4641667d53</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\packs\ATSAML11E16A_DFP\component\opamp.h</file>
-         <hash>408bf16350f3ed5e7257f2804e5dea3b1a940b8c4bec730a03f781cff5813c78</hash>
+         <hash>823d3caa73c099226f6da6a9d272ec3ae14da290886522136afe3f6f2dd83b05</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\packs\ATSAML11E16A_DFP\instance\port.h</file>
-         <hash>faca723f8dac71f98e276d0881160f4aaee48d0f9018f8a4b761e65d204f41f1</hash>
+         <hash>fa5ccfa27130bd6a9fcd420662141e2e14052a54d3f1735ae89d766b1af735b7</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\ATSAML11E16A_DFP\component\pm.h</file>
-         <hash>ff4ae039cde9bb3f876947734822cdb354c33692275978c83f152be4004e9e9d</hash>
+         <hash>e949c21d0d42c3662dbf3fa9c7f4701a2cdbd81bfafb9cfd8a0d421aa89b8d46</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\packs\ATSAML11E16A_DFP\component\dmac.h</file>
-         <hash>11423f974b2db73d249c021c54c31d2982c94bbd4e24929a293535e0efaf4151</hash>
+         <hash>21a1a274f53ae5985c8f02bbbf704e66826127f5e1b620402376259b4ef8ce7b</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\config\sam_l11_xpro\definitions.h</file>
-         <hash>ec8f824b6549e96023e2d7df1dab871ff53d49571bdeb796ffbd400c7ec9487a</hash>
+         <hash>83a5664e7a43b5a5756148012f4deb98d661db077259945c31eb9f8c89951a0d</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\packs\ATSAML11E16A_DFP\component\tc.h</file>
-         <hash>9c89bda9e89b7b4befa01505dd933499f8ab48f4046d4e0bacfae8529775b2a8</hash>
+         <hash>454e51fd9e2190abefa76343b1157003a4fffaa9d8912d47104cdac224b56fec</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\third_party\rtos\FreeRTOS\Source\portable\MemMang\heap_1.c</file>
-         <hash>d03a08079e678cc6e6a1e2105684ab0082d190bbb731f6807d75e1aca260e98f</hash>
+         <hash>286e3fee81c9107fc6dec40405f500cabdca56836d29747c182f0899bb8997fd</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\config\sam_l11_xpro\configuration.h</file>
@@ -2042,19 +2046,19 @@
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\ATSAML11E16A_DFP\instance\tc0.h</file>
-         <hash>7d21a637b79391a2c3458748928a97769c20a24bfb7f062118de601bb87087be</hash>
+         <hash>720085a42970da6b284c1f074c0bc187c1c9a2d0e6008e70a686bb72fefa731a</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\third_party\rtos\FreeRTOS\Source\portable\GCC\ARM_CM23\secure\secure_context_port.c</file>
-         <hash>ea1907ed1245c65e744625fc84ec31eeb399fbbb8ad4f3b1c06f2692587847f2</hash>
+         <hash>5432f55c36b0aa1db1d33485097dcd11774f9e4470983e81b870a613f7946789</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\packs\ATSAML11E16A_DFP\instance\rstc.h</file>
-         <hash>edd2fac13b7f1e59b39a09f5a468016a5698a04bd92c8225cb5434cb63bd41e0</hash>
+         <hash>f937fa2a13824e98b2e14b7420d910026dbaf464f3e8a9fca92024c35082748a</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\packs\ATSAML11E16A_DFP\instance\sercom1.h</file>
-         <hash>4e4645b9b956fb2c4aeae41eb1b548a8debd1259f42ea848dc24d627214385f8</hash>
+         <hash>1ba2397be498e08a485613d13cac5e88e2771e94dc6bf5f6c62ec53877f51b64</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\CMSIS\CMSIS\Core\Include\cmsis_version.h</file>
@@ -2062,15 +2066,15 @@
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\packs\ATSAML11E16A_DFP\instance\dsu.h</file>
-         <hash>2bb236ccf750d12905e466aa59825008912784ac896e1b71d724fede90b94122</hash>
+         <hash>df17e514e945740dfdd793043f95ae79d254555c660e850dcbfb47c8efd5ef14</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\ATSAML11E16A_DFP\instance\dsu.h</file>
-         <hash>2bb236ccf750d12905e466aa59825008912784ac896e1b71d724fede90b94122</hash>
+         <hash>df17e514e945740dfdd793043f95ae79d254555c660e850dcbfb47c8efd5ef14</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\packs\ATSAML11E16A_DFP\component\pm.h</file>
-         <hash>ff4ae039cde9bb3f876947734822cdb354c33692275978c83f152be4004e9e9d</hash>
+         <hash>e949c21d0d42c3662dbf3fa9c7f4701a2cdbd81bfafb9cfd8a0d421aa89b8d46</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\CMSIS\CMSIS\Core\Include\cmsis_compiler.h</file>
@@ -2078,11 +2082,11 @@
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\third_party\rtos\FreeRTOS\Source\queue.c</file>
-         <hash>4452e3b0e6446b74c7d010d308072ba0a35c1f92bcf3882a54bf3796a72517aa</hash>
+         <hash>5cdf4fa35fe059446effff5bf20deaf83ddffb08921bc198fda106b1d17dd894</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\third_party\rtos\FreeRTOS\Source\include\timers.h</file>
-         <hash>2bf5b5f5d83684c1e6d90e5bd17da9de41d38ed61ec0410f94595ff343f89174</hash>
+         <hash>ee0f596a54137e26ca806ebf067c4c6219a61348f1cbae8861a43d2d4891e1f9</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\config\sam_l11_xpro\device_vectors.h</file>
@@ -2090,31 +2094,31 @@
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\packs\ATSAML11E16A_DFP\instance\tc0.h</file>
-         <hash>7d21a637b79391a2c3458748928a97769c20a24bfb7f062118de601bb87087be</hash>
+         <hash>720085a42970da6b284c1f074c0bc187c1c9a2d0e6008e70a686bb72fefa731a</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\packs\ATSAML11E16A_DFP\instance\mclk.h</file>
-         <hash>221f5838896daac0ef78d16abd0f15be368ad1eca0284bdf50f71239f6580e24</hash>
+         <hash>b389c2173848cc8cabd889b1a3998ad4d197c6662964d82235c63062e638218a</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\packs\ATSAML11E16A_DFP\instance\fuses.h</file>
-         <hash>911fe0d525d68af37d5266029bfb9a32bccdf9801ead89a820ee053157368ef1</hash>
+         <hash>c268f6f442761a3b5116ef6679d6002d282438c7b647b634cdbedae0ddcdb85e</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\third_party\rtos\FreeRTOS\Source\portable\GCC\ARM_CM23\secure\secure_init.c</file>
-         <hash>18773a1461d922f6c7cf81666b3f628b54a199f269360efd3fb0377343e3adda</hash>
+         <hash>2d73838a2d5f25d1393ada5bd824037971e869ed2a75c9d74d626beb9bd1a61c</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\ATSAML11E16A_DFP\component\idau.h</file>
-         <hash>36a6768ad205544624054ffa9f535288dd2be05c0babf94fd1bc008419b4b839</hash>
+         <hash>9878a6c125f36fe6515d76fa7abb9910ffeebf4143a148c96d4aa7f33f3307f6</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\packs\ATSAML11E16A_DFP\instance\evsys.h</file>
-         <hash>017382613dc6c11c487e111d49fb6133dd3b95a971caab040332994782cab27b</hash>
+         <hash>52632019d703f06fc8f6b6bea0b543b731335eca32f3fbd3cdbd55da7c9f1d67</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\packs\ATSAML11E16A_DFP\instance\osc32kctrl.h</file>
-         <hash>d0a6589463dd52bfadfc4627bfd55c07e06451b545907e863db5a4dd8c7d096c</hash>
+         <hash>a12fe5cd15586beae7a54bfd2b2df6a88f0879d8cdd0bbf52a5b19e85107d069</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\config\sam_l11_xpro\peripheral\evsys\plib_evsys.c</file>
@@ -2122,7 +2126,7 @@
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\packs\ATSAML11E16A_DFP\component\trng.h</file>
-         <hash>059c01f68ef768d522c104faaa883523cf1099992e9e3a6dd99c752a497480b8</hash>
+         <hash>270a37b8cacdb96537ab10a1b713138b0c1698705803b962011256aa9d360313</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\CMSIS\CMSIS\Core\Include\cachel1_armv7.h</file>
@@ -2130,11 +2134,11 @@
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\third_party\rtos\FreeRTOS\Source\event_groups.c</file>
-         <hash>82542c835466f2abd0eeb2988a0bcecf3d6a14c9dd87ad4a7ca325b15afbce95</hash>
+         <hash>76e967b14d231e4f31f014f1564f359a7bfd36bfa263ee6f437afa8c056df657</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\third_party\rtos\FreeRTOS\Source\portable\GCC\ARM_CM23\secure\secure_init.h</file>
-         <hash>e8ea6ec1e9a74ed98be28aef8f0b04a43db9d48b1d3813803bd5642cdd7881a7</hash>
+         <hash>18ccc503c6085d4f9b1759ade241b2d5810c61d0a5cfa9393c36718e282e812c</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\config\sam_l11_xpro\exceptions.c</file>
@@ -2142,11 +2146,11 @@
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\third_party\rtos\FreeRTOS\Source\include\mpu_wrappers.h</file>
-         <hash>0f7a750669b24c41af51482eb76c867a1ed11c14dd4877d07433db3953d9a792</hash>
+         <hash>5014408cc33f0f616215f2b48c67b0d47ccc35bfd5f0044ac653b5bbc6cf5778</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\ATSAML11E16A_DFP\component\fuses.h</file>
-         <hash>d508a41a940a5a77482dc14e16015edeba9cff2ec4357b2b5bbee41bef6c32b4</hash>
+         <hash>a442f0d9aec056cc3280d09317c0f2b94708239e9f36bb29978c8e7a46f895e1</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\config\sam_l11_xpro\libc_syscalls.c</file>
@@ -2154,23 +2158,23 @@
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\ATSAML11E16A_DFP\component\adc.h</file>
-         <hash>c04d1985430686a1743e36adb32e7f5d8fa1c23a7c8ce89d3c0a7f8d56adb988</hash>
+         <hash>ad0013a6b06e8b75d81fa3329d636cfdd4e1c13af184d656be8683d7df974069</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\ATSAML11E16A_DFP\instance\adc.h</file>
-         <hash>edb49e468c255eb4c19a42ddd00a3022fac94108b0d888a8f0286e612b8b8308</hash>
+         <hash>31e83ca565418f61c8be408005fd87be0203051ed6f284aa57f3939499b59ae7</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\packs\ATSAML11E16A_DFP\component\eic.h</file>
-         <hash>78ac05903cc7ea41405daacb7f182f0279bd694d75d3441c0e3657d0dd017d32</hash>
+         <hash>838d171d85467f5263eab96c0e04052449a1425385c6b4cde2e62e70653517a1</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\packs\ATSAML11E16A_DFP\instance\eic.h</file>
-         <hash>f0d81a6b2c61b631a118500a9500a7b29fabc32ece34d37c4c30d4fcda1a11a9</hash>
+         <hash>97b3a429965198664c6b17e52ce708afa446c4c64ec38e4f1ab4450f67d766b5</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\ATSAML11E16A_DFP\instance\port.h</file>
-         <hash>faca723f8dac71f98e276d0881160f4aaee48d0f9018f8a4b761e65d204f41f1</hash>
+         <hash>fa5ccfa27130bd6a9fcd420662141e2e14052a54d3f1735ae89d766b1af735b7</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\config\sam_l11_xpro\stdio\xc32_monitor.c</file>
@@ -2182,23 +2186,23 @@
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\packs\ATSAML11E16A_DFP\component\wdt.h</file>
-         <hash>21a1b66cfae5fe88ad03b9ff80f467c26fa8173218673755c4bfdda1e321fadd</hash>
+         <hash>0d82a420ac98884cc540fb2e513f37cefbd244cde67dc26821c2acdd789a0058</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\packs\ATSAML11E16A_DFP\instance\wdt.h</file>
-         <hash>79ca36de4d8599099bc1ee814c400c9f609779ead6aafa06e60c5ed812a1f801</hash>
+         <hash>1db3e93dc10b5cdcb66e0ca1a07d398fc1dcafbe8c505c5c0cacd0b36b0388da</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\packs\ATSAML11E16A_DFP\instance\trng.h</file>
-         <hash>3eb98bc586269bf0705719297119f21c3ccf2fd7433c10e54fd1ebcbb24935f0</hash>
+         <hash>3b80b295c20598ec082a3411c6ade76164833952572cc4148d9e1cea5e070c6c</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\third_party\rtos\FreeRTOS\Source\croutine.c</file>
-         <hash>4566d5abfceea128a553ecf2bbb22b9d7c9c8a1d3c1f02f9091182b5290d02fc</hash>
+         <hash>ebf0cdce261dc4a256c06c0d4ad2582e6026a6da0e973d4cb92092e94ce8f370</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\config\sam_l11_xpro\startup_xc32.c</file>
-         <hash>d7ba451f4fffc267a5da6a83377b2b935a88cd73342f8a1f38ea8c39a86d963f</hash>
+         <hash>e6227d89e36b74af1bc21e00e80b390502c97aaaa65796291f63b2d96cf0678e</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\config\sam_l11_xpro\peripheral\evsys\plib_evsys.h</file>
@@ -2206,11 +2210,11 @@
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\config\sam_l11_xpro\initialization.c</file>
-         <hash>5c85bf4f9a05f03545fbe9f2162b604084ca2e7aaf38ce4bcec73c46219c98e4</hash>
+         <hash>b7bc3010ab5648fc23a0b9871a29c3f85ff0f90dad7169225032524718b4c2ed</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\packs\ATSAML11E16A_DFP\component\nvmctrl.h</file>
-         <hash>93b8775a788b825c69a4569cb3a12aba49ce327082b16fc37d5c3631541f29a0</hash>
+         <hash>9fc4bc1035def02ce42ac8a2eba9d2a026312a08a824aa34a904d53c1d311060</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\main.c</file>
@@ -2218,39 +2222,39 @@
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\packs\ATSAML11E16A_DFP\instance\tc1.h</file>
-         <hash>f79a3403d89990462a8b2cd0dd4f17c6191efcbda90a7e5621ae877017d68f9e</hash>
+         <hash>0ab6ce807e8455eaa61d5be6e1195a16583ea66bccb398ecce78342ffad2ce11</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\config\sam_l11_xpro\peripheral\clock\plib_clock.c</file>
-         <hash>a629e9ebac4c23c1b7affb39eacc0b60f949d309ec3d17f53c1c1da4a5aca704</hash>
+         <hash>cbe7b24bfcbcc4864fea0141230517caddb1a5a273560b7b9e15d9c95ea5c25c</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\config\sam_l11_xpro\tasks.c</file>
-         <hash>c2e082523362dca85c5fc10596d835baff3675f917e0fc4d5f5c3d753f3df8d4</hash>
+         <hash>722c8b6d3c2e677586fff879f06422958f44994d429a7fa19b12022a00f7882b</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\third_party\rtos\FreeRTOS\Source\include\semphr.h</file>
-         <hash>6bc571df5182f06bcafe5280fdf762bbba2bf1dbb7867ae3721ce2d7e3e51dae</hash>
+         <hash>c624e8cdfc07844d4cf35382f3cc908c872375c7a3048482bdc110bda88cc4f2</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\packs\ATSAML11E16A_DFP\instance\opamp.h</file>
-         <hash>6bbc63e2b187820d10af89e99e25a3af487694bc73dfec74c729ee32a6cb28f6</hash>
+         <hash>a36f3b0f54f5220d4cc117aac2775ac32b319f09b0f92ffbef5ff8dd66f82bc4</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\packs\ATSAML11E16A_DFP\component\mclk.h</file>
-         <hash>239ca5e294fab7281d8716d9cf3f8c4208027bb08a38844b8ec348bd8cbf58ca</hash>
+         <hash>8f1da2091e8695360c59701fed9d8bf07261e1386cf6f3d2da2b75972d0f7cb7</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\ATSAML11E16A_DFP\component\nvmctrl.h</file>
-         <hash>93b8775a788b825c69a4569cb3a12aba49ce327082b16fc37d5c3631541f29a0</hash>
+         <hash>9fc4bc1035def02ce42ac8a2eba9d2a026312a08a824aa34a904d53c1d311060</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\ATSAML11E16A_DFP\component\ccl.h</file>
-         <hash>50dffd809df8d84c1cebe4ac9f5c47919fb400a8bd640241556a97d76b664cf8</hash>
+         <hash>ac56870cd660a940adad3150efc31c94c618e6d160bb218f13957b1b1af6d950</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\ATSAML11E16A_DFP\instance\ccl.h</file>
-         <hash>1dfd559aaec2b84c89edaf216267cd697e404c09fb767838c319134569f6ff4e</hash>
+         <hash>778b5e23549bd50ef37c035fb236aeebc0f6ac90d18483201ab755e034ac943a</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\CMSIS\CMSIS\Core\Include\cmsis_iccarm.h</file>
@@ -2258,23 +2262,27 @@
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\third_party\rtos\FreeRTOS\Source\include\FreeRTOS.h</file>
-         <hash>c8d9b7a52d092f37b4c3b821806bd6e8a30dbcc600960f9aed2b2f10f965c09f</hash>
+         <hash>03e9c94aba57e3cf7f4f73bc2d3eb4a96ae38f3425eedb5450622ca286475a0b</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\config\sam_l11_xpro\FreeRTOSConfig.h</file>
-         <hash>8045337e36828ad0972f0a606088a78b90e3c730e7396adb06c06cdff8125d1c</hash>
+         <hash>92ae22e35d3edaa48ee3fe2281fb057c0aff527f4861ba5a2882a0fe665db415</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\packs\ATSAML11E16A_DFP\pio\saml11e16a.h</file>
-         <hash>f937b5d28fe30c087f651e0d01fe3ea8a79a04f30795ea20fb1db99bdcf24ec3</hash>
+         <hash>6ab51641f7f89f2f5c9680e4b5927b219e27dca3af4f68102f58cb99f20579e4</hash>
+      </entry>
+      <entry>
+         <file>..\..\..\NonSecure\firmware\src\third_party\rtos\FreeRTOS\Source\portable\GCC\ARM_CM23\non_secure\portmacrocommon.h</file>
+         <hash>092ada632d0d217b194ba3e1344b814c0ca80913ee3546b40e5c5914a100cd87</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\packs\ATSAML11E16A_DFP\component\ptc.h</file>
-         <hash>ed8c98455506ba7b29e9cdf6f158402f87b6ebeaf8b69531273a288ed58d3525</hash>
+         <hash>617d89472fd226a7cb5806ba3d623d1f497f9b5ac13a987cf16531f65969a72c</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\packs\ATSAML11E16A_DFP\instance\ptc.h</file>
-         <hash>c54a7a8ee4c408d8af8b10930efcc43eaf63258bd774602a04b8f4572d528744</hash>
+         <hash>a02bbd09cc9b6626a110db49c4e8b67cdebfca38a84875042a40682fc7789ed7</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\config\sam_l11_xpro\interrupts.c</file>
@@ -2282,7 +2290,7 @@
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\ATSAML11E16A_DFP\instance\trng.h</file>
-         <hash>3eb98bc586269bf0705719297119f21c3ccf2fd7433c10e54fd1ebcbb24935f0</hash>
+         <hash>3b80b295c20598ec082a3411c6ade76164833952572cc4148d9e1cea5e070c6c</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\config\sam_l11_xpro\peripheral\nvic\plib_nvic.h</file>
@@ -2298,7 +2306,7 @@
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\ATSAML11E16A_DFP\instance\dmac.h</file>
-         <hash>e7045d892ed84e4101fed4244344c046ecd0a50192aa98b8b91371666cb0bd63</hash>
+         <hash>9ab7bdd74600c1a372dfbbedf0555af6745c9ede8dce688f283be6394a385d83</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\packs\CMSIS\CMSIS\Core\Include\cmsis_armcc.h</file>
@@ -2310,11 +2318,11 @@
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\packs\ATSAML11E16A_DFP\instance\tram.h</file>
-         <hash>3f06d2719b2b2f9f71b68c90fa348bd3d5836d8d13719c58152ebd5efe1925a2</hash>
+         <hash>38d999129ff2d3cea181ffd3cb089a73f9845af2b87b083a95b05039c2ccca8c</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\ATSAML11E16A_DFP\component\evsys.h</file>
-         <hash>178d5da9e9391ad2a83d78f6fc238d8277b923fcb963785409277efd521fbd81</hash>
+         <hash>58a8abb509f9db3e9f56e2908a9077ce8b4fe033323051305d190052e2ea8bf8</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\app.h</file>
@@ -2322,7 +2330,7 @@
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\ATSAML11E16A_DFP\instance\ptc.h</file>
-         <hash>c54a7a8ee4c408d8af8b10930efcc43eaf63258bd774602a04b8f4572d528744</hash>
+         <hash>a02bbd09cc9b6626a110db49c4e8b67cdebfca38a84875042a40682fc7789ed7</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\config\sam_l11_xpro\interrupts.h</file>
@@ -2330,11 +2338,11 @@
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\packs\ATSAML11E16A_DFP\component\tram.h</file>
-         <hash>02e62b27d38b89e9a873bd66c4e236c64db3ffe48511e465976064e6755390c9</hash>
+         <hash>be7cba340ebc0aa822ba2b90e0c57f3da23f1f9f6dee723d123d8d4641667d53</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\packs\ATSAML11E16A_DFP\instance\tc2.h</file>
-         <hash>ff53a5468e9b03c4c1eaf3c4f4ec8cd65a04c7c64fc875415609bdde3ab996d0</hash>
+         <hash>3443cdb9a10b995b749918a89b3d78bcb1ce7e4a3197793963679f59955c726c</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\config\sam_l11_xpro\peripheral\clock\plib_clock.h</file>
@@ -2342,7 +2350,7 @@
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\config\sam_l11_xpro\toolchain_specifics.h</file>
-         <hash>c93f9d68b1623668727be21b4449250a7e4a5d7040776d6f6d604a7528ffc9eb</hash>
+         <hash>a4f1774c6f1f8c6cd522567536c9e9d75ca63259b868015ac9b0fb0aeeffe1f4</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\app1.c</file>
@@ -2358,7 +2366,7 @@
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\ATSAML11E16A_DFP\component\rtc.h</file>
-         <hash>108fb84b1726faea5f27c7c3a05d09bd2df0f2b5e1e29d90787f11cdde2f62d8</hash>
+         <hash>207ecb532c7bfa256395daebb99b9451b604da434bcf50ed70e359ceca04afe7</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\packs\CMSIS\CMSIS\Core\Include\tz_context.h</file>
@@ -2366,23 +2374,23 @@
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\ATSAML11E16A_DFP\instance\rtc.h</file>
-         <hash>9a52dfb21fbaebcc5e77c7f030515d7905ec3f7b3530625f955b83c50307affa</hash>
+         <hash>c855e60f7641b58cf0911f7bae3156c940723ee7e40655b25cd652b1721ff412</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\ATSAML11E16A_DFP\component\pac.h</file>
-         <hash>a96be7a0fc0cddf3a09f8b3df1ca9b5dddeaee88239fa32bd683f23a4094ce59</hash>
+         <hash>268a7c6fdf885406ce4e8eb9395fd6791a35707c4c8873c1f1d5b53ab37b442d</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\third_party\rtos\FreeRTOS\Source\include\list.h</file>
-         <hash>f288a68b8559a1913dd663136711f7adcaf8b3430627d7102978be4d808a02eb</hash>
+         <hash>dc572f54391c0407fc25db360d912fca9118cddae7bd2e3099eb13f18804e5a9</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\packs\ATSAML11E16A_DFP\component\idau.h</file>
-         <hash>36a6768ad205544624054ffa9f535288dd2be05c0babf94fd1bc008419b4b839</hash>
+         <hash>9878a6c125f36fe6515d76fa7abb9910ffeebf4143a148c96d4aa7f33f3307f6</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\config\sam_l11_xpro\ATSAML11E16A.ld</file>
-         <hash>391b2a0089665b50b003c72b8c8764df1a221d997dea5af89618fe315a3eddd3</hash>
+         <hash>caf7c5c79271652bf3f234cec59bfe35aec7fcfb7faca06c5fd630cd96c96ea7</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\config\sam_l11_xpro\stdio\xc32_monitor.c</file>
@@ -2390,67 +2398,67 @@
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\third_party\rtos\FreeRTOS\Source\include\mpu_prototypes.h</file>
-         <hash>783d9a41c90817eec55d9317475cc2663a785fc9a955c06d3207fcee6e0ec080</hash>
+         <hash>2b46a2511ce5d23a56bc83079333d8d0a2e33763e5829c9383252806887a3dc0</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\third_party\rtos\FreeRTOS\Source\list.c</file>
-         <hash>21fe8dd565f9610e1ff4a6bf7bebbd16842af13d3d2294f1dc67ad279fb01d22</hash>
+         <hash>db5c169cf3efd68da1c6a923ac84eebc724d602c940bde0b9b5f01f05028fde4</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\third_party\rtos\FreeRTOS\Source\portable\GCC\ARM_CM23\non_secure\portmacro.h</file>
-         <hash>6ae298bc6b6acb8bebab85995d029c1ae08b619c32a48cc4a70db5fe21303155</hash>
+         <hash>f8dddfe2d258338e1180fdc299e2200f5f568480e47dbd66b3ea3fb96a9cde61</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\packs\ATSAML11E16A_DFP\instance\ac.h</file>
-         <hash>249de4a2a90c1891b637a962dbb204b54ff54b2c7f4a4faf918df9c0cdb18432</hash>
+         <hash>3fd2624b4c5729f6c0d2fc688bdaf31ee8a6b22febf6d61178d7fb73e7a5b77d</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\ATSAML11E16A_DFP\component\dsu.h</file>
-         <hash>8d6a3ac710aba36984e900a7b94cacdf13c85ddfa906d39e0b21f6cf8e564899</hash>
+         <hash>151ec2a9ec0259b92daaa0b8b04d1ffefd72925f847eb5f7a91313f1053ba498</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\ATSAML11E16A_DFP\component\mclk.h</file>
-         <hash>239ca5e294fab7281d8716d9cf3f8c4208027bb08a38844b8ec348bd8cbf58ca</hash>
+         <hash>8f1da2091e8695360c59701fed9d8bf07261e1386cf6f3d2da2b75972d0f7cb7</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\ATSAML11E16A_DFP\component\opamp.h</file>
-         <hash>408bf16350f3ed5e7257f2804e5dea3b1a940b8c4bec730a03f781cff5813c78</hash>
+         <hash>823d3caa73c099226f6da6a9d272ec3ae14da290886522136afe3f6f2dd83b05</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\third_party\rtos\FreeRTOS\Source\include\deprecated_definitions.h</file>
-         <hash>1947473678873963f3193497280d907f59a5936f92df6395327f7ca684cb1aa6</hash>
+         <hash>35000a143464bbbd8df7c9a6f066a64598a24da5174a7be33972e62bfbd75f4d</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\ATSAML11E16A_DFP\component\ac.h</file>
-         <hash>68bd09259af83e2c74738c98fa329136a054bdd6316ff47f83ff469fd776741a</hash>
+         <hash>9aece10a2cc9dfeaf43d5e04cf68896ec8aac3c591623a2d66c16ced6ffe08f4</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\ATSAML11E16A_DFP\component\osc32kctrl.h</file>
-         <hash>7ec4ced49e4d5d511d313fb6aa70a377b97d2a93a9aa502a5a02e5d440614d88</hash>
+         <hash>4cadfd4a50cd182776851f5d65031ac0f503f279b4595be0aa68f4858ba47047</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\ATSAML11E16A_DFP\instance\freqm.h</file>
-         <hash>0db79cb3ce344c1e72e559c4c8440ac153c75d8c693e6964d61a7e6512207e2a</hash>
+         <hash>bdf512bd0245758700f08540f69b768adca3beebffff0ac8e2f04ed7c2306275</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\ATSAML11E16A_DFP\instance\evsys.h</file>
-         <hash>017382613dc6c11c487e111d49fb6133dd3b95a971caab040332994782cab27b</hash>
+         <hash>52632019d703f06fc8f6b6bea0b543b731335eca32f3fbd3cdbd55da7c9f1d67</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\config\sam_l11_xpro\freertos_hooks.c</file>
-         <hash>1c31f7febed38afbcb09d11b002c5dddda98c7ed7aba9ff8f8e32b8c5f288a47</hash>
+         <hash>3062db4f47d59d8ff5654c75b8f3d09cb07ce6c85fd6dfdc1b48536ac865a526</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\packs\ATSAML11E16A_DFP\component\dac.h</file>
-         <hash>4bf337a72a19b3f7167436135f626196a6526e0d4687beaf2ff349184a5c7f54</hash>
+         <hash>6cf6b2052a85b134979f763a81438d1674682c262ca976ac7b02df5b78a039d2</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\config\sam_l11_xpro\peripheral\nvic\plib_nvic.c</file>
-         <hash>0ba2c4e03ac657d567eddddebb7493b9e31549045798af3a90c9f4651a572566</hash>
+         <hash>deeae94a3c22896ec673f0d6dadc7c139a61f8a6826ac2641efd585ddbaaa500</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\third_party\rtos\FreeRTOS\Source\include\message_buffer.h</file>
-         <hash>0f5a90e8303d9aa2a9c897d6b90da50df21776c6bde7bf8c792cacffa3048c8d</hash>
+         <hash>9a8141d3d6c8044a57d7e448180c9bd2ed32e45ded32be288d095a39dced91ab</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\app2.c</file>
@@ -2458,7 +2466,7 @@
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\ATSAML11E16A_DFP\instance\pm.h</file>
-         <hash>b613292a7a9c6b955c84013030a7e64553b23a73b22027296bb0bacad2f3dd4a</hash>
+         <hash>4d28d84e006f67ce7c296a64e5c95a465dde93a32ffb5b32dc2bcadac9874d0b</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\packs\CMSIS\CMSIS\Core\Include\cmsis_version.h</file>
@@ -2466,7 +2474,7 @@
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\ATSAML11E16A_DFP\instance\opamp.h</file>
-         <hash>6bbc63e2b187820d10af89e99e25a3af487694bc73dfec74c729ee32a6cb28f6</hash>
+         <hash>a36f3b0f54f5220d4cc117aac2775ac32b319f09b0f92ffbef5ff8dd66f82bc4</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\CMSIS\CMSIS\Core\Include\cmsis_gcc.h</file>
@@ -2474,19 +2482,19 @@
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\ATSAML11E16A_DFP\component\gclk.h</file>
-         <hash>43cd7acaad9842f5ad45f5bb3ef0243efb15ecfbe4033dd6d819222473abb64b</hash>
+         <hash>637157ba806b68b19bc2a70f5bc014fec842a0a68231c20570d4c6e30d8b64f3</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\packs\ATSAML11E16A_DFP\component\supc.h</file>
-         <hash>41504073554a9fcf44ebe435c4306cd394a5b80af2bce75f368e3953555d3ebc</hash>
+         <hash>81b5ef5ea1905feb7f3a1c79cbad71fbe706b52c31eac2157c5bd589db47067e</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\packs\ATSAML11E16A_DFP\component\adc.h</file>
-         <hash>c04d1985430686a1743e36adb32e7f5d8fa1c23a7c8ce89d3c0a7f8d56adb988</hash>
+         <hash>ad0013a6b06e8b75d81fa3329d636cfdd4e1c13af184d656be8683d7df974069</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\ATSAML11E16A_DFP\component\sercom.h</file>
-         <hash>07cdf314eb764493cc53e45381c1a6ba18f560928f783dd481c15bb72cd5e0fd</hash>
+         <hash>d28ed0dbc55c0e510433926fda7372744bff3bb5177ae3787d2d1d95e5955a5c</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\config\sam_l11_xpro\device.h</file>
@@ -2510,11 +2518,11 @@
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\packs\ATSAML11E16A_DFP\component\port.h</file>
-         <hash>c4fef6e40d5b84c9453cb733a9c4159d3f81c602801d9209ec260a69f9db5add</hash>
+         <hash>ed63eb744b51945704256e4e185fc12fa1829dce123644479f4dca78c0179699</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\ATSAML11E16A_DFP\instance\nvmctrl.h</file>
-         <hash>a51e6b60d8f4c48ee375892075d50ffbc53cf69167744ea269fa434bc3b3c5b4</hash>
+         <hash>f0cc4a165a3025781dbadedd4995a4bc7dab49c0b2e321c6c8ae6709872b3e8e</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\app2.h</file>
@@ -2522,31 +2530,31 @@
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\ATSAML11E16A_DFP\instance\tram.h</file>
-         <hash>3f06d2719b2b2f9f71b68c90fa348bd3d5836d8d13719c58152ebd5efe1925a2</hash>
+         <hash>38d999129ff2d3cea181ffd3cb089a73f9845af2b87b083a95b05039c2ccca8c</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\third_party\rtos\FreeRTOS\Source\portable\GCC\ARM_CM23\secure\secure_context.c</file>
-         <hash>b9efca744186189dd16442ec1dcf3ebd5e1007451565a7e921bb9a063013f697</hash>
+         <hash>f02d9865272423ef884534f26868ce2027ff8a478def76a33c965cfe455a62c9</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\third_party\rtos\FreeRTOS\Source\portable\GCC\ARM_CM23\secure\secure_context.h</file>
-         <hash>ee74160d9994429655d82387944874e2af38feddaa77bced7247b2f3a6ca1d99</hash>
+         <hash>13d3a5a04d29fc0f4063f925f5b87132d228a0fe925c3d2858daa3d344524f3d</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\config\sam_l11_xpro\peripheral\port\plib_port.h</file>
-         <hash>3bbcae0908a8690e0bf7b2e6ceaee4085ed4fc83f0d037390269a8623241acc7</hash>
+         <hash>8b929a5f53dc6081b54f2f47efcab7fbcd0f209b590a0df63824ac25b06fc59d</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\third_party\rtos\FreeRTOS\Source\portable\GCC\ARM_CM23\secure\secure_heap.h</file>
-         <hash>c2fa0764b71886b99a00df94a4dc55cff867bbc2efc653354d58d49f388a8711</hash>
+         <hash>f231f2ace9f2f0830551970803c0507042a716475dc1e09f5525fa28cb279d0c</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\ATSAML11E16A_DFP\component\eic.h</file>
-         <hash>78ac05903cc7ea41405daacb7f182f0279bd694d75d3441c0e3657d0dd017d32</hash>
+         <hash>838d171d85467f5263eab96c0e04052449a1425385c6b4cde2e62e70653517a1</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\third_party\rtos\FreeRTOS\Source\FreeRTOS_tasks.c</file>
-         <hash>f97f4e54a7511e5aea34f583061c628bf718b1024af6ec4cff55cb50365305da</hash>
+         <hash>14020d617b96dd2814e1211f6e3b645bcf5e2bd3179c23fe7dd16bc666fe9463</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\config\sam_l11_xpro\device_vectors.h</file>
@@ -2554,11 +2562,11 @@
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\packs\ATSAML11E16A_DFP\component\rstc.h</file>
-         <hash>8b9e326480c348cf23935a290cc2838ef2a2cd1fc65ad758cb6956d94b3bc62f</hash>
+         <hash>d22eed5f30048c779f20c5b29bc534d21b48d15235d7140b2a5d557e613f88b0</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\packs\ATSAML11E16A_DFP\instance\dmac.h</file>
-         <hash>e7045d892ed84e4101fed4244344c046ecd0a50192aa98b8b91371666cb0bd63</hash>
+         <hash>9ab7bdd74600c1a372dfbbedf0555af6745c9ede8dce688f283be6394a385d83</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\config\sam_l11_xpro\peripheral\nvmctrl\plib_nvmctrl.c</file>
@@ -2566,11 +2574,11 @@
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\ATSAML11E16A_DFP\instance\osc32kctrl.h</file>
-         <hash>d0a6589463dd52bfadfc4627bfd55c07e06451b545907e863db5a4dd8c7d096c</hash>
+         <hash>a12fe5cd15586beae7a54bfd2b2df6a88f0879d8cdd0bbf52a5b19e85107d069</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\config\sam_l11_xpro\peripheral\port\plib_port.h</file>
-         <hash>2c0bdac8ace93b33ab1b4b540e5a05195f51904d5047e7339edbf1edf936fde4</hash>
+         <hash>5b97e4518e23897ebb5e4e3cccdba426503d040d1644571c270d67c1593bb3ea</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\main.c</file>
@@ -2578,23 +2586,27 @@
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\config\sam_l11_xpro\startup_xc32.c</file>
-         <hash>d7ba451f4fffc267a5da6a83377b2b935a88cd73342f8a1f38ea8c39a86d963f</hash>
+         <hash>e6227d89e36b74af1bc21e00e80b390502c97aaaa65796291f63b2d96cf0678e</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\packs\ATSAML11E16A_DFP\component\dsu.h</file>
-         <hash>8d6a3ac710aba36984e900a7b94cacdf13c85ddfa906d39e0b21f6cf8e564899</hash>
+         <hash>151ec2a9ec0259b92daaa0b8b04d1ffefd72925f847eb5f7a91313f1053ba498</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\packs\ATSAML11E16A_DFP\component\wdt.h</file>
-         <hash>21a1b66cfae5fe88ad03b9ff80f467c26fa8173218673755c4bfdda1e321fadd</hash>
+         <hash>0d82a420ac98884cc540fb2e513f37cefbd244cde67dc26821c2acdd789a0058</hash>
       </entry>
       <entry>
          <file>..\..\..\Secure\firmware\src\packs\CMSIS\CMSIS\Core\Include\cmsis_armclang_ltm.h</file>
          <hash>8621969ea669a1b230ff2125a760ef66d575c48cb45e9e457f768909abcbda46</hash>
       </entry>
       <entry>
+         <file>..\..\..\NonSecure\firmware\src\config\sam_l11_xpro\sys_tasks.h</file>
+         <hash>e6a52fd8a9c1a711cd7dea48c63cf30b372824281d9dc846b2ecd95d5e11ec6a</hash>
+      </entry>
+      <entry>
          <file>..\..\..\Secure\firmware\src\third_party\rtos\FreeRTOS\Source\portable\GCC\ARM_CM23\secure\secure_heap.c</file>
-         <hash>a832c0af18c76a28be5cc342c76ac9b5b3bc1fb2ba4f2e0ab805054936df73a1</hash>
+         <hash>3bc55eed4a8fb875af67e9eba8f8922ad9a0f1636a5a3e378d77ee65fa1b8cc6</hash>
       </entry>
    </generatedFileHashHistoryMap>
 </config>
