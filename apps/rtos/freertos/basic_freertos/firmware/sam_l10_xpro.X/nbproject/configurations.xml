@@ -50,6 +50,7 @@
           <itemPath>../src/config/sam_l10_xpro/configuration.h</itemPath>
           <itemPath>../src/config/sam_l10_xpro/interrupts.h</itemPath>
           <itemPath>../src/config/sam_l10_xpro/device_vectors.h</itemPath>
+          <itemPath>../src/config/sam_l10_xpro/sys_tasks.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="f2" displayName="FreeRTOS" projectFiles="true">
@@ -183,22 +184,6 @@
       <itemPath>../src/task4.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles" displayName="Important Files" projectFiles="true">
-      <logicalFolder name="f1" displayName="sam_l10_xpro.mhc" projectFiles="true">
-        <itemPath>../src/config/sam_l10_xpro/sam_l10_xpro.mhc/BSP_SAM_L10_Xplained_Pro.yml</itemPath>
-        <itemPath>../src/config/sam_l10_xpro/sam_l10_xpro.mhc/cmsis.yml</itemPath>
-        <itemPath>../src/config/sam_l10_xpro/sam_l10_xpro.mhc/core.yml</itemPath>
-        <itemPath>../src/config/sam_l10_xpro/sam_l10_xpro.mhc/dfp.yml</itemPath>
-        <itemPath>../src/config/sam_l10_xpro/sam_l10_xpro.mhc/eic.yml</itemPath>
-        <itemPath>../src/config/sam_l10_xpro/sam_l10_xpro.mhc/evsys.yml</itemPath>
-        <itemPath>../src/config/sam_l10_xpro/sam_l10_xpro.mhc/FreeRTOS.yml</itemPath>
-        <itemPath>../src/config/sam_l10_xpro/sam_l10_xpro.mhc/GraphSettings.yml</itemPath>
-        <itemPath>../src/config/sam_l10_xpro/sam_l10_xpro.mhc/HarmonyCore.yml</itemPath>
-        <itemPath>../src/config/sam_l10_xpro/sam_l10_xpro.mhc/nvmctrl.yml</itemPath>
-        <itemPath>../src/config/sam_l10_xpro/sam_l10_xpro.mhc/pm.yml</itemPath>
-        <itemPath>../src/config/sam_l10_xpro/sam_l10_xpro.mhc/project.yml</itemPath>
-        <itemPath>../src/config/sam_l10_xpro/sam_l10_xpro.mhc/sercom0.yml</itemPath>
-        <itemPath>../src/config/sam_l10_xpro/sam_l10_xpro.mhc/settings.yml</itemPath>
-      </logicalFolder>
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/sam_l10_xpro/harmony-manifest-success.yml</itemPath>
       <itemPath>basic_freertos_sam_l10_xpro.mc3</itemPath>
