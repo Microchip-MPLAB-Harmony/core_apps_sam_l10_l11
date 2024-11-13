@@ -253,7 +253,7 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>EdbgTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.21</languageToolchainVersion>
+        <languageToolchainVersion>4.35</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
@@ -401,7 +401,7 @@
         <property key="oXC32ld-extra-opts" value=""/>
         <property key="optimization-level" value=""/>
         <property key="preprocessor-macros"
-                  value="ANSC_SIZE=0x400;AS_SIZE=0x8000;BNSC_SIZE=0x0;BOOTPROT_SIZE=0x0;BS_SIZE=0x0;RS_SIZE=0x2000;SECURE"/>
+                  value="ANSC_SIZE=0x400;AS_SIZE=0x8000;BNSC_SIZE=0x0;BOOTPROT_SIZE=0x0;BS_SIZE=0x0;RS_SIZE=0x800;SECURE"/>
         <property key="remove-unused-sections" value="true"/>
         <property key="report-memory-usage" value="false"/>
         <property key="serial-length" value=""/>
