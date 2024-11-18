@@ -58,7 +58,6 @@
 #include "peripheral/clock/plib_clock.h"
 #include "peripheral/nvic/plib_nvic.h"
 #include "system/int/sys_int.h"
-#include "system/dma/sys_dma.h"
 #include "osal/osal.h"
 #include "system/debug/sys_debug.h"
 #include "app.h"
@@ -74,13 +73,13 @@ extern "C" {
 // DOM-IGNORE-END
 
 /* Device Information */
-#define DEVICE_NAME			 "ATSAML10E16A"
-#define DEVICE_ARCH			 "CORTEX-M23"
-#define DEVICE_FAMILY		 "SAML"
-#define DEVICE_SERIES		 "SAML10"
+#define DEVICE_NAME          "ATSAML10E16A"
+#define DEVICE_ARCH          "CORTEX-M23"
+#define DEVICE_FAMILY        "SAML"
+#define DEVICE_SERIES        "SAML10"
 
 /* CPU clock frequency */
-#define CPU_CLOCK_FREQUENCY 32000000
+#define CPU_CLOCK_FREQUENCY 32000000U
 
 // *****************************************************************************
 // *****************************************************************************
