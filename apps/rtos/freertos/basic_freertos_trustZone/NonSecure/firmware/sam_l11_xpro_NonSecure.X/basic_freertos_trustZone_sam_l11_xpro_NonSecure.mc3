@@ -1637,7 +1637,7 @@
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\config\sam_l11_xpro\definitions.h</file>
-         <hash>d9cd31e54a41690de3c61c9544ee6e2572773eba23e1e67906b0fdf47fa29a14</hash>
+         <hash>4ff4e5cc8ac2cc3355db912e339ae88201a9c327dd3d9016e34e9380f38464df</hash>
       </entry>
       <entry>
          <file>..\..\..\NonSecure\firmware\src\config\sam_l11_xpro\device.h</file>

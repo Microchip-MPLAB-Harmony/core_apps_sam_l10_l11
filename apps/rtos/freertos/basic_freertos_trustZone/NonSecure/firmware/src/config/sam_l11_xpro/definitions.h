@@ -50,9 +50,9 @@
 #include <stdbool.h>
 #include "peripheral/port/plib_port.h"
 #include "peripheral/nvic/plib_nvic.h"
-#include "bsp/bsp.h"
 #include "FreeRTOS.h"
 #include "task.h"
+#include "bsp/bsp.h"
 #include "osal/osal.h"
 #include "app.h"
 #include "app1.h"
