@@ -3,6 +3,19 @@
 
 # Microchip MPLAB® Harmony 3 Release Notes
 
+## Harmony 3 driver and system service application examples for SAM L10/L11 family v3.5.1
+
+### New Features
+
+- None
+
+### Bug fixes
+
+- Fixed build issue in Basic Freetos application for SAM L11
+
+### Development Tools
+- Same as v3.5.0
+
 ## Harmony 3 driver and system service application examples for SAM L10/L11 family v3.5.0
 
 ### Development kit and demo application support
